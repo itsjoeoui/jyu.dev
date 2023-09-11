@@ -1,23 +1,35 @@
 ---
-interface Props {
-	title: string;
-}
+import Header from "../components/Header.astro";
+
+import "@fontsource/open-sans";
+
+type Props = {
+  title: string;
+};
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
 
+  <body class="container bg-neutral-900 p-8 mx-auto text-neutral-400 text-sm">
+    <Header />
+    <div class="py-4"></div>
+    <slot />
+  </body>
+
+  <style is:global>
+    html {
+      font-family: "Open Sans" cursive;
+    }
+  </style>
+</html>

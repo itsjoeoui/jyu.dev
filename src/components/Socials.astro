@@ -1,0 +1,44 @@
+---
+type Social = {
+  link: string;
+  name: string;
+};
+
+const socials: Social[] = [
+  {
+    name: "GitHub",
+    link: "https://github.com/itsjoeoui",
+  },
+  // {
+  //   name: "X",
+  //   link: "https://twitter.com/itsjoeoui",
+  // },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/itsjoeoui/",
+  },
+];
+---
+
+<div class="flex gap-2">
+  {
+    socials.map((social, idx) => {
+      if (idx !== socials.length - 1) {
+        return (
+          <>
+            <a href={social.link} class="hover:text-neutral-100">
+              {social.name}
+            </a>
+            <div>/</div>
+          </>
+        );
+      } else {
+        return (
+          <a href={social.link} class="hover:text-neutral-100">
+            {social.name}
+          </a>
+        );
+      }
+    })
+  }
+</div>

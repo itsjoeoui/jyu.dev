@@ -1,13 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { personalData } from "../data/personal";
+import { ViewTransitions } from "astro:transitions";
+import Socials from "../components/Socials.astro";
 ---
 
 <Layout title="jyu.dev">
-  <main class="bg-red-300">
-    <div class="container mx-auto bg-green-300">
-      <div class="py-2"></div>
-      <div>{personalData.email}</div>
-    </div>
-  </main>
+  <ViewTransitions />
+
+  <div class="text-3xl text-neutral-100">Hi, I'm Joey 👋</div>
+
+  <div class="py-4"></div>
+
+  <div class="max-w-xl leading-relaxed">
+    I am a student at <a class="text-orange-400">McGill University</a>. I am
+    currently leading the product team at <a
+      class="text-orange-400"
+      href="https://flojoy.ai">Flojoy</a
+    >, we are a startup building an open-source Python-based alternative to
+    engineering software like LabVIEW.
+  </div>
+
+  <div class="py-4"></div>
+
+  <Socials />
 </Layout>

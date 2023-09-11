@@ -1,0 +1,30 @@
+---
+import { personalData } from "../data/personal";
+import { getBaseRouteName } from "../utils/getBaseRouteName";
+
+const currentRoute = Astro.url.pathname;
+---
+
+<div>
+  <a href={`mailto:${personalData.email}`} class="hover:text-neutral-100"
+    >{personalData.email}</a
+  >
+  <div class="py-1"></div>
+  <div class="flex gap-2">
+    <a
+      href="/"
+      class:list={{
+        ["hover:text-neutral-100"]: true,
+        ["text-neutral-100"]: getBaseRouteName(currentRoute) === "/",
+      }}>Home</a
+    >
+    <div>/</div>
+    <a
+      href="/posts"
+      class:list={{
+        ["hover:text-neutral-100"]: true,
+        ["text-neutral-100"]: getBaseRouteName(currentRoute) === "/posts",
+      }}>Posts</a
+    >
+  </div>
+</div>
