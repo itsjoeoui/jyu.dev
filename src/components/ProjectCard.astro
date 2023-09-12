@@ -1,0 +1,21 @@
+---
+import type { Project } from "../types/project";
+
+type Props = {
+  proj: Project;
+};
+
+const { proj } = Astro.props;
+---
+
+<div
+  class="border transition border-neutral-800 hover:bg-neutral-800 max-w-xl rounded-md p-4"
+>
+  <a href={proj.link} target="_blank">
+    <div class="text-md text-neutral-300 flex gap-1 items-center">
+      {proj.name}
+    </div>
+    <div class="py-0.5"></div>
+    <div class="text-sm text-neutral-400">{proj.desc}</div>
+  </a>
+</div>

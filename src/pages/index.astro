@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { ViewTransitions } from "astro:transitions";
 import Socials from "../components/Socials.astro";
+import ProjectList from "../components/ProjectList.astro";
 ---
 
 <Layout title="jyu.dev">
@@ -12,10 +13,14 @@ import Socials from "../components/Socials.astro";
   <div class="py-4"></div>
 
   <div class="max-w-xl leading-relaxed">
-    I am a student at <a class="text-orange-400">McGill University</a>. I am
-    currently leading the product team at <a
+    I am a student at <a
       class="text-orange-400"
-      href="https://flojoy.ai">Flojoy</a
+      href="https://mcgill.ca"
+      target="_blank">McGill University</a
+    >. I am currently leading the product team at <a
+      class="text-orange-400"
+      href="https://flojoy.ai"
+      target="_blank">Flojoy</a
     >, we are a startup building an open-source Python-based alternative to
     engineering software like LabVIEW.
   </div>
@@ -23,4 +28,12 @@ import Socials from "../components/Socials.astro";
   <div class="py-4"></div>
 
   <Socials />
+
+  <div class="py-4"></div>
+
+  <div class="text-xl text-neutral-200">Projects</div>
+
+  <div class="py-2"></div>
+
+  <ProjectList />
 </Layout>

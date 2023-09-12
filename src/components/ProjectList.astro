@@ -1,0 +1,12 @@
+---
+import { projectsData } from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<div class="flex flex-col gap-2">
+  {
+    projectsData.map((proj, _) => {
+      return <ProjectCard proj={proj} />;
+    })
+  }
+</div>
