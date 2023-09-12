@@ -4,6 +4,7 @@ import { ViewTransitions } from "astro:transitions";
 import Socials from "../components/Socials.astro";
 import Contact from "../components/Contact.astro";
 import ProjectList from "../components/ProjectList.astro";
+import LatestPosts from "../components/LatestPosts.astro";
 ---
 
 <Layout title="jyu.dev">
@@ -32,9 +33,9 @@ import ProjectList from "../components/ProjectList.astro";
 
   <div class="py-4"></div>
 
-  <div class="text-xl text-neutral-200">Projects</div>
+  <LatestPosts />
 
-  <div class="py-2"></div>
+  <div class="py-4"></div>
 
   <ProjectList />
 
