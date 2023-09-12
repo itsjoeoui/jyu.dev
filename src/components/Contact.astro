@@ -1,0 +1,18 @@
+---
+import { personalData } from "../data/personal";
+import Socials from "../components/Socials.astro";
+---
+
+<div>
+  <div class="text-xl text-neutral-200">Get in touch</div>
+  <div class="py-2"></div>
+  <div>
+    You can reach me at
+    <a
+      href={`mailto:${personalData.email}`}
+      class="text-orange-400 hover:text-neutral-100">{personalData.email}</a
+    >, or use any of the social links below!
+  </div>
+  <div class="py-1"></div>
+  <Socials />
+</div>
