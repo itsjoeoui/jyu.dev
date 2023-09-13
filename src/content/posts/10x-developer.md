@@ -5,18 +5,7 @@ isDraft: true
 tags: ["macOS"]
 ---
 
-## Content
-
-- [Raycast](#Raycast)
-- Rectangle
-- Screen Studio
-- CleanShot X
-- AdGuard
-- 1Password
-- Arc
-- Tmux
-- LazyVim
-- LazyGit
+## Table of Contents
 
 Qui enim elit ullamco consectetur anim consequat irure Lorem cupidatat mollit tempor. Eu officia dolor mollit sunt amet cupidatat velit nulla labore eiusmod sint sit cillum. Irure eu do elit id cillum sit consequat dolor ex irure ullamco ad mollit duis veniam. Duis in ad officia aute velit sunt excepteur culpa. Minim labore consectetur reprehenderit ea mollit amet nostrud dolore fugiat culpa nostrud do proident.
 
