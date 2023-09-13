@@ -1,0 +1,32 @@
+@tailwind base;
+
+.post h1 {
+  @apply text-3xl my-3 text-orange-400 underline underline-offset-8 decoration-1 font-extrabold;
+}
+
+.post h2 {
+  @apply text-2xl my-2 text-neutral-100 font-bold;
+}
+
+.post h3 {
+  @apply text-xl my-1;
+}
+
+.post p {
+  @apply text-base my-0.5 leading-loose;
+}
+
+.post li {
+  @apply text-base my-0.5;
+}
+
+.post ul {
+  @apply list-disc pl-8;
+}
+
+.post a {
+  @apply text-neutral-100 underline;
+}
+
+@tailwind components;
+@tailwind utilities;

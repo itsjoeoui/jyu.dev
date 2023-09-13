@@ -14,7 +14,7 @@ const publishedPostEntries = await getCollection("posts");
             <PostCard
               title={post.data.title}
               date={post.data.date}
-              slug={post.data.slug}
+              slug={post.slug}
               isDraft={post.data.isDraft}
             />
           );

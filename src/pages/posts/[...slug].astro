@@ -21,21 +21,11 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
   <ViewTransitions />
-  <h1>{entry.data.title}</h1>
+  <div class="max-w-3xl post">
+    <h1>{entry.data.title}</h1>
 
-  <Content />
+    <Content />
+
+    <div></div>
+  </div>
 </Layout>
-
-<style>
-  h1 {
-    @apply text-2xl text-orange-400;
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-
-  h3 {
-    @apply text-lg;
-  }
-</style>

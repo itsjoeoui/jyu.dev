@@ -7,7 +7,7 @@ export const Post = z.object({
   isDraft: z.boolean(),
   author: z.string().default("Joey Yu"),
   date: z.date(),
-  slug: z.string(),
+  // slug: z.string(),
 });
 
 export type Post = z.infer<typeof Post>;

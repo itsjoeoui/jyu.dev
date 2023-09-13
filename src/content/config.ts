@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { Post } from "../types/post";
 
 const postCollection = defineCollection({
@@ -7,5 +7,5 @@ const postCollection = defineCollection({
 });
 
 export const collections = {
-  post: postCollection,
+  posts: postCollection,
 };
