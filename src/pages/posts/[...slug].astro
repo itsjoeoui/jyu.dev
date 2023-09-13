@@ -24,6 +24,12 @@ const { Content } = await entry.render();
   <div class="max-w-3xl post">
     <h1>{entry.data.title}</h1>
 
+    <div>
+      Published on {(entry.data.date as Date).toLocaleDateString()} by {
+        entry.data.author
+      }
+    </div>
+
     {
       entry.data.isDraft && (
         <div>This is still a work in progress, please check back later! :)</div>
