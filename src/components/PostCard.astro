@@ -1,0 +1,34 @@
+---
+type Props = {
+  title: string;
+  slug: string;
+  date: Date;
+  isDraft: boolean;
+};
+
+const { title, slug, date, isDraft } = Astro.props;
+---
+
+<div
+  class="border transition border-neutral-800 hover:bg-neutral-800 max-w-xl rounded-md p-4"
+>
+  <a href={`/posts/${slug}`}>
+    <div class="text-md text-neutral-300 flex gap-1 items-center">
+      <div>
+        {title}
+      </div>
+      <div class="grow"></div>
+      {
+        isDraft && (
+          <>
+            <div class="text-sm text-neutral-500">Draft</div>
+            <div class="px-0.5" />
+          </>
+        )
+      }
+      <div>
+        {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,41 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { ViewTransitions } from "astro:transitions";
+
+export async function getStaticPaths() {
+  const postEntries = await getCollection("posts");
+  return postEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<"posts">;
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <ViewTransitions />
+  <h1>{entry.data.title}</h1>
+
+  <Content />
+</Layout>
+
+<style>
+  h1 {
+    @apply text-2xl text-orange-400;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+</style>

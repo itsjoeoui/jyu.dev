@@ -11,6 +11,7 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.0.3",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource/open-sans": "^5.0.12",
     "astro": "^3.0.12",
