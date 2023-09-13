@@ -5,7 +5,7 @@
 }
 
 .post h2 {
-  @apply text-2xl my-2 text-neutral-100 font-bold;
+  @apply text-2xl my-2 text-neutral-100 font-bold flex;
 }
 
 .post h3 {
@@ -26,6 +26,9 @@
 
 .post a {
   @apply text-neutral-100 underline;
+}
+
+.anchor-link {
 }
 
 @tailwind components;
