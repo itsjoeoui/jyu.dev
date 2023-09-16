@@ -13,6 +13,11 @@ type Post struct {
 	ID      uint32    `json:"id"`
 }
 
+// TODO: Add a database
+// TODO: Add a router
+// TODO: Add a controller
+// TODO: Add pagination control
+
 func main() {
 	r := gin.Default()
 

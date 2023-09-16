@@ -18,6 +18,8 @@ const parsedData = z.array(Post).parse(data["data"]);
 <Layout title="jyu.dev - feed">
   <div>
     <ViewTransitions />
+    {/* TODO: This needs to be a React component instead */}
+
     {
       parsedData.map((post) => {
         return <div>{post.content}</div>;
