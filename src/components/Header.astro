@@ -3,6 +3,26 @@ import { personalData } from "../data/personal";
 import { getBaseRouteName } from "../utils/getBaseRouteName";
 
 const currentRoute = Astro.url.pathname;
+
+type Route = {
+  name: string;
+  path: string;
+};
+
+const routes: Route[] = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Posts",
+    path: "/posts",
+  },
+  {
+    name: "Feed",
+    path: "/feed",
+  },
+];
 ---
 
 <div>
@@ -11,20 +31,38 @@ const currentRoute = Astro.url.pathname;
   >
   <div class="py-1"></div>
   <div class="flex gap-2">
-    <a
-      href="/"
-      class:list={{
-        ["hover:text-neutral-100"]: true,
-        ["text-neutral-100"]: getBaseRouteName(currentRoute) === "/",
-      }}>Home</a
-    >
-    <div>/</div>
-    <a
-      href="/posts"
-      class:list={{
-        ["hover:text-neutral-100"]: true,
-        ["text-neutral-100"]: getBaseRouteName(currentRoute) === "/posts",
-      }}>Posts</a
-    >
+    {
+      routes.map((route, idx) => {
+        if (idx === routes.length - 1) {
+          return (
+            <a
+              href={route.path}
+              class:list={{
+                ["hover:text-neutral-100"]: true,
+                ["text-neutral-100"]:
+                  getBaseRouteName(currentRoute) === route.path,
+              }}
+            >
+              {route.name}
+            </a>
+          );
+        }
+        return (
+          <>
+            <a
+              href={route.path}
+              class:list={{
+                ["hover:text-neutral-100"]: true,
+                ["text-neutral-100"]:
+                  getBaseRouteName(currentRoute) === route.path,
+              }}
+            >
+              {route.name}
+            </a>
+            <div>/</div>
+          </>
+        );
+      })
+    }
   </div>
 </div>
