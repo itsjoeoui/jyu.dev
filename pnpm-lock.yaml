@@ -18,19 +18,19 @@ dependencies:
     specifier: ^5.0.12
     version: 5.0.12
   '@types/react':
-    specifier: ^18.0.21
+    specifier: ^18.2.21
     version: 18.2.21
   '@types/react-dom':
-    specifier: ^18.0.6
+    specifier: ^18.2.7
     version: 18.2.7
   astro:
     specifier: ^3.1.0
     version: 3.1.0
   react:
-    specifier: ^18.0.0
+    specifier: ^18.2.0
     version: 18.2.0
   react-dom:
-    specifier: ^18.0.0
+    specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   rehype-autolink-headings:
     specifier: ^7.0.0
