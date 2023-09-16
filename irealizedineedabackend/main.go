@@ -29,7 +29,7 @@ func main() {
 		},
 		{
 			ID:      2,
-			Content: "All pointers should come first to optimze GC.",
+			Content: "All pointers should come first to optimize GC.",
 			Data:    time.Now(),
 		},
 	}
