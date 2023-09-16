@@ -1,23 +1,23 @@
 @tailwind base;
 
 .post h1 {
-  @apply text-3xl my-3 text-orange-400 underline underline-offset-8 decoration-1 font-extrabold;
+  @apply my-3 text-3xl font-extrabold text-orange-400 underline decoration-1 underline-offset-8;
 }
 
 .post h2 {
-  @apply text-2xl my-2 text-neutral-100 font-bold flex gap-1;
+  @apply my-2 flex gap-1 text-2xl font-bold text-neutral-100;
 }
 
 .post h3 {
-  @apply text-xl my-1 flex gap-1;
+  @apply my-1 flex gap-1 text-xl;
 }
 
 .post p {
-  @apply text-base my-0.5 leading-loose;
+  @apply my-0.5 text-base leading-loose;
 }
 
 .post li {
-  @apply text-base my-0.5;
+  @apply my-0.5 text-base;
 }
 
 .post ul {

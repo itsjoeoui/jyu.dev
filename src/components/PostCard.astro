@@ -11,9 +11,9 @@ const { title, slug, date, isDraft } = Astro.props;
 
 <a href={`/posts/${slug}`}>
   <div
-    class="border transition border-neutral-800 hover:bg-neutral-800 max-w-xl rounded-md p-4"
+    class="max-w-xl rounded-md border border-neutral-800 p-4 transition hover:bg-neutral-800"
   >
-    <div class="text-md text-neutral-300 flex gap-1 items-center">
+    <div class="text-md flex items-center gap-1 text-neutral-300">
       <div>
         {title}
       </div>
