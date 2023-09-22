@@ -1,29 +1,12 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
-import { z } from "astro:content";
-
-const response = await fetch("https://jyu-dev.onrender.com/api/posts");
-const data = await response.json();
-
-const Post = z.object({
-  id: z.number(),
-  content: z.string(),
-  date: z.coerce.date(),
-});
-
-const parsedData = z.array(Post).parse(data["data"]);
+import FeedView from "../components/FeedView";
 ---
 
 <Layout title="jyu.dev - feed">
   <div>
     <ViewTransitions />
-    {/* TODO: This needs to be a React component instead */}
-
-    {
-      parsedData.map((post) => {
-        return <div>{post.content}</div>;
-      })
-    }
+    <FeedView client:only />
   </div>
 </Layout>
