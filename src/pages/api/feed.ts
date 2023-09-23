@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { Client, fql } from "fauna";
 
+// TODO: Create a separate Next.js app for feed
 const client = new Client({ secret: import.meta.env.FAUNA_SECRET });
 
 type Tweet = {
