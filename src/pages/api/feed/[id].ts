@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { Client, fql } from "fauna";
-import type { Tweet } from "../../../types/tweet";
+import type { Tweet } from "@/types/tweet";
 
 const client = new Client({ secret: import.meta.env.FAUNA_SECRET });
 

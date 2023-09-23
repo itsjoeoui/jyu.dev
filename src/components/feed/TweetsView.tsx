@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { z } from "astro:content";
 
-import { Tweet } from "../types/tweet";
+import { Tweet } from "@/types/tweet";
 
-type Props = {};
-
-const TweetView = (props: Props) => {
+const TweetView = () => {
   const [tweets, setTweets] = useState<Tweet[]>([]);
 
   useEffect(() => {

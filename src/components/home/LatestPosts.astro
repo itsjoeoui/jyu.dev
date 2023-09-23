@@ -1,11 +1,19 @@
 ---
 import { getCollection } from "astro:content";
-import PostCard from "../components/PostCard.astro";
+import PostCard from "@/components/shared/PostCard.astro";
 
-const publishedPostEntries = await getCollection("posts");
+const publishedPostEntries = await getCollection("posts", ({ data }) => {
+  return data.isDraft !== true;
+});
 ---
 
 <div>
+  <div class="flex max-w-xl items-center">
+    <div class="text-xl text-neutral-200">Latest posts</div>
+    <div class="grow"></div>
+    <a href="/posts" class="hover:text-neutral-100">View all</a>
+  </div>
+  <div class="py-2"></div>
   <div>
     {
       publishedPostEntries.length !== 0 ? (
