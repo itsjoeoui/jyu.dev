@@ -1,12 +1,12 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Layout from "@/layouts/Layout.astro";
-import TweetsView from "@/components/feed/TweetsView";
+import TweetsView from "@/components/feed/TweetsView.tsx";
 ---
 
 <Layout title="jyu.dev - feed">
   <ViewTransitions />
   <div>
-    <TweetsView client:load />
+    <TweetsView client:only="react" />
   </div>
 </Layout>
