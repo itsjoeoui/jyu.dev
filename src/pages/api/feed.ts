@@ -13,8 +13,8 @@ type Tweet = {
 
 export const GET: APIRoute = async ({ params, request }) => {
   const query = fql`
-  tweets.all()
-`;
+    tweets.all().reverse()
+  `;
 
   const response = await client.query<{ data: Tweet[] }>(query);
   console.log(response.data.data[0].ts.isoString);

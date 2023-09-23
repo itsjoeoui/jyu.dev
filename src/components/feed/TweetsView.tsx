@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { z } from "astro:content";
 
 import { Tweet } from "@/types/tweet";
+import TweetCard from "./TweetCard";
 
 const TweetView = () => {
   const [tweets, setTweets] = useState<Tweet[]>([]);
@@ -21,9 +22,9 @@ const TweetView = () => {
   }, []);
 
   return (
-    <div>
-      {tweets.map((post) => {
-        return <div key={post.id}>{post.body}</div>;
+    <div className="flex flex-col gap-2">
+      {tweets.map((tweet, idx) => {
+        return <TweetCard key={idx} tweet={tweet} />;
       })}
     </div>
   );
