@@ -1,10 +1,6 @@
 ---
 import { personalData } from "@/data/personal";
 import { getBaseRouteName } from "@/utils/getBaseRouteName";
-import { getSession } from "auth-astro/server";
-import { SignIn, SignOut } from "auth-astro/components";
-
-const session = await getSession(Astro.request);
 
 const currentRoute = Astro.url.pathname;
 
@@ -67,18 +63,6 @@ const routes: Route[] = [
           </>
         );
       })
-    }
-    <div class="grow"></div>
-    {
-      session ? (
-        <SignOut>
-          <div class="hover:text-neutral-100">Log Out</div>
-        </SignOut>
-      ) : (
-        <SignIn provider={"github"}>
-          <div class="hover:text-neutral-100">Log In</div>
-        </SignIn>
-      )
     }
   </div>
 </div>
