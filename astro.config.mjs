@@ -5,6 +5,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
+import auth from "auth-astro";
 
 import vercel from "@astrojs/vercel/serverless";
 
@@ -43,5 +44,6 @@ export default defineConfig({
     }),
     mdx(),
     react(),
+    auth(),
   ],
 });
