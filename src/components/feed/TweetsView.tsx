@@ -24,6 +24,11 @@ const TweetView = () => {
       {tweets.map((tweet, idx) => {
         return <TweetCard key={idx} tweet={tweet} />;
       })}
+      {tweets.length === 0 && (
+        <div className="text-neutral-300 text-center">
+          Something is not right!
+        </div>
+      )}
     </div>
   );
 };
