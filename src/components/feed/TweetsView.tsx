@@ -20,7 +20,7 @@ const TweetView = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex max-w-xl flex-col gap-2">
       {tweets.map((tweet, idx) => {
         return <TweetCard key={idx} tweet={tweet} />;
       })}

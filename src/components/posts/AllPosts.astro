@@ -6,7 +6,7 @@ const publishedPostEntries = await getCollection("posts");
 ---
 
 <div>
-  <div>
+  <div class="flex max-w-xl flex-col">
     {
       publishedPostEntries.length !== 0 ? (
         publishedPostEntries.map((post) => {

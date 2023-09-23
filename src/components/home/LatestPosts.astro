@@ -14,7 +14,7 @@ const publishedPostEntries = await getCollection("posts", ({ data }) => {
     <a href="/posts" class="hover:text-neutral-100">View all</a>
   </div>
   <div class="py-2"></div>
-  <div>
+  <div class="flex max-w-xl flex-col">
     {
       publishedPostEntries.length !== 0 ? (
         publishedPostEntries.map((post) => {
