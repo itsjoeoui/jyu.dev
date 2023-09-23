@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 .astro
 .vercel/
+.vercel
+.env*.local
