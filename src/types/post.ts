@@ -5,9 +5,8 @@ export const Post = z.object({
   tags: z.array(z.string()),
   img: z.string().optional(),
   isDraft: z.boolean(),
-  author: z.string().default("Joey Yu"),
   date: z.date(),
-  // slug: z.string(),
+  author: z.string().default("Joey Yu"),
 });
 
 export type Post = z.infer<typeof Post>;

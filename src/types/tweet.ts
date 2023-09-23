@@ -4,6 +4,7 @@ export const Tweet = z.object({
   body: z.string(),
   id: z.string(),
   ts: z.object({
+    // Can't make this a z.coerce.date() otherwise the Fauna driver will complain
     isoString: z.string(),
   }),
 });

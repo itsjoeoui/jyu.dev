@@ -1,11 +1,9 @@
 ---
-title: 10x Your Developer Experience on macOS
-date: 2023-09-12
+title: 10 Must-Have macOS Apps
+date: 2023-09-22
 isDraft: true
 tags: ["macOS", "Productivity"]
 ---
-
-If you are reading this on a Windows machine, oops.
 
 ## Table of Contents
 
