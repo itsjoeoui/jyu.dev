@@ -8,15 +8,15 @@ type Props = {
 const { proj } = Astro.props;
 ---
 
-<a href={proj.link} target="_blank">
-  <div
-    class="max-w-xl rounded-md border border-neutral-800 p-4 transition hover:bg-neutral-800"
-  >
-    <div class="text-md flex items-center gap-1 text-neutral-300">
-      {proj.name}
-    </div>
-    <div class="py-0.5"></div>
-
-    <div class="text-sm text-neutral-400">{proj.desc}</div>
+<a
+  href={proj.link}
+  target="_blank"
+  class="max-w-xl rounded-md border border-neutral-800 p-4 transition hover:bg-neutral-800"
+>
+  <div class="text-md flex items-center gap-1 text-neutral-300">
+    {proj.name}
   </div>
+  <div class="py-0.5"></div>
+
+  <div class="text-sm text-neutral-400">{proj.desc}</div>
 </a>
