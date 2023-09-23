@@ -11,13 +11,11 @@ const TweetView = () => {
     const fetchTweet = async () => {
       const response = await fetch("/api/feed");
       const data = await response.json();
-      console.log(data);
       const parsedData = z.array(Tweet).parse(data["data"]);
 
       setTweets(parsedData);
     };
 
-    console.log("BRUH");
     fetchTweet();
   }, []);
 

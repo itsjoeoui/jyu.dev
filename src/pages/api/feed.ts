@@ -17,7 +17,6 @@ export const GET: APIRoute = async ({ params, request }) => {
   `;
 
   const response = await client.query<{ data: Tweet[] }>(query);
-  console.log(response.data.data[0].ts.isoString);
 
   return new Response(JSON.stringify(response.data));
 };
