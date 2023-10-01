@@ -1,9 +1,11 @@
 ---
-title: 10 Must-Have macOS Apps
-date: 2023-09-22
+title: Boost Your Productivity on macOS
+date: 2023-10-01
 isDraft: true
 tags: ["macOS", "Productivity"]
 ---
+
+My first-ever blog post!
 
 ## Table of Contents
 
