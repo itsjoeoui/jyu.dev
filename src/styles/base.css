@@ -5,15 +5,15 @@
 }
 
 .post h2 {
-  @apply my-2 flex gap-1 text-2xl font-bold text-neutral-100;
+  @apply my-2 flex gap-1 text-2xl font-bold text-neutral-200;
 }
 
 .post h3 {
-  @apply my-1 flex gap-1 text-xl;
+  @apply my-1 flex gap-1 text-xl text-neutral-300 font-semibold;
 }
 
 .post p {
-  @apply my-0.5 text-base leading-loose;
+  @apply my-0.5 text-base leading-relaxed text-neutral-400 py-2;
 }
 
 .post li {
@@ -21,11 +21,15 @@
 }
 
 .post ul {
-  @apply list-disc pl-8;
+  @apply list-disc pl-8 underline-offset-4;
 }
 
 .post a {
-  @apply text-neutral-100 underline;
+  @apply text-neutral-200 underline underline-offset-4;
+}
+
+.post strong {
+  @apply text-neutral-200;
 }
 
 .anchor-link {
