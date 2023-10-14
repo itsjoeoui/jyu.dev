@@ -5,7 +5,7 @@
 }
 
 .post h2 {
-  @apply my-2 flex gap-1 text-2xl font-bold text-neutral-200;
+  @apply mb-2 mt-8 flex gap-1 text-2xl font-bold text-neutral-200;
 }
 
 .post h3 {
@@ -18,6 +18,10 @@
 
 .post li {
   @apply my-0.5 text-base;
+}
+
+.post ol {
+  @apply list-decimal pl-8 underline-offset-4;
 }
 
 .post ul {

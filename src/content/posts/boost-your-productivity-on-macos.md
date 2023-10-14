@@ -5,85 +5,175 @@ isDraft: true
 tags: ["macOS", "Productivity"]
 ---
 
-In this blog post, I will share with you some of the tools that I use to boost
-my productivity on macOS. I will skip over the ones that most people already
-knows about, such as [Homebrew](https://brew.sh/), or [Google Chrome](https://chromeisbad.com/)
-(Just kidding, I will show you a better alternative), and I hope this post will
-help you discover some new tools that you might find useful :)
+Have you ever seen people doing this on their Macs so they can have 2 windows side by side?
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/Qtlsghnj/download" type="video/mp4">
+</video>
+
+I know, it is a bit painful to see how that 11 seconds just gone into waste there.
+But Hey! You may have realized it already, we could have just used macOS's split screen mode, right?
+
+The answer is, **yes, and no**.
+
+Let's first take a look at how it would work if you use the split screen mode:
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/wG35vvKC/download" type="video/mp4">
+</video>
+
+Based on my observation, this approach seems to be the most common when it comes to splitting the screen on macOS.
+
+However, it is not the most efficient way to do so, and there are a couple of annoying drawbacks,
+let's take a look at the following example:
+
+Imagine you are currently browsing your notes on the split screen, and you just have
+a question and you would like to email your instructor. Now you have to switch to another window
+to get to your Outlook client. You start typing your email, after a couple minutes,
+you may not remember where your split screen was. Then you start to swipe left and right
+on your trackpad, trying to find your split screen.
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/wJBDJ8Hb/download" type="video/mp4">
+</video>
+
+Not to mention that while you are typing your email, you may also be constantly
+swiping left and right to check something on your notes. I see people do this all the time,
+swiping on their trackpad trying to find their "lecture_5.pdf" that's in full screen mode on "Desktop 8" :(
+
+Moreover, this can easily become a mess once you have lots of split screens opened at the same time.
+
+How can we make this better? Using [Rectangle](https://rectangleapp.com/)!
 
 ## Table of Contents
 
-## Raycast
+## Rectangle Window Manager
 
-Raycast is probably the first thing I will install on a Mac. It offers a similar
-experience to the default Spotlight, but it is much more powerful than that.
+[Rectangle](https://rectangleapp.com/) is a free and open-source window management app for macOS, it allows you
+to manage your window placement using keyboard shortcuts or snap areas.
 
-Some of the features I use the most besides launching apps are:
+Let me show you how it works, by replicating the same scenario as above, only using
+keyboard shortcuts:
 
-- Raycast AI
-- Clipboard History
-- Kill Process
-- Find files, Launch Google Meet, Search TailwindCSS docs, Add Linear issues,
-  Toggle Spotify, Lookup words with dictionary, Calculator, Translator...
-- You get the idea, you can almost always find a Raycast extension each app you use.
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/yJJS4Fj7/download" type="video/mp4">
+</video>
 
-I will go over some of them in a bit more detail...
+This provides lots of benefits:
 
-### Raycast AI
+1. No need to touch your trackpad/mouse, it is a lot faster to do things with your keyboard only.
 
-I like Raycast AI because it gives me **instant** access to GPT with just a
-keyboard shortcut with **0 interruption** of my workflow.
+2. Very easy to re-arrange your window, place it anywhere you like, left half, right half, top half, bottom half, etc.
 
-I do not have to first open up my browser, navigate to chat.openai.com, then
-realize my auth has expired so I need to sign in again... You get the idea, by
-doing all of these it completely interrupts one's thought process / flow.
+3. Unlike the split screen mode, you can have multiple windows on the same screen.
+   Thus no need to swipe left and right to access some other window.
 
-For example:
+4. No need to move your cursor to the smallest green expand icon, and then click on it.
 
-![Raycast AI Demo](../../assets/raycast-ai.gif)
+5. the list goes on...
 
-With Raycast AI, I can be sure I will be able to get a response within 10 seconds.
+One important thing that completes the Rectangle experience is 👇
 
-### Clipboard History
+## Hiding your macOS Dock
 
-Being able to see all your clipboard history is simply amazing.
+In my opinion, the Dock takes up lots of screen real estate, but provides little to no value in return.
 
-Remember the time when you need to copy multiple code snippets from the docs page
-to your project and you are constantly navigating back and forth from your editor?
-Have you ever tried finding a link or a command you copied yesterday?
+Most people use the Docs to access their apps, move files to the trash bin, etc. But relying on
+your trackpad/mouse to perform those actions is quite slow and inefficient.
 
-With the clipboard history feature, all your clipboard history will be saved and
-you can easily access them, search through them with a keyboard shortcut.
+There are 2 main ways to claim that screen real estate back:
 
-![Raycast Clipboard History](../../assets/raycast-clipboard-history.png)
+1. If the app you want to access is already open, simply use the Command+tab shortcut to switch to it.
 
-### Kill Process
+2. If not, use Spotlight, or even better, Raycast to launch the app.
 
-As the name suggests, this feature allows you to quickly search through your
-current running processes and killing the ones you want.
+Compare the 2 following examples, one with the Dock and one without:
 
-![Raycast Kill Process](../../assets/raycast-kill-process.png)
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/Qt0vw9pn/download" type="video/mp4">
+</video>
 
-You can find more Raycast extensions from the [Raycast Store](https://www.raycast.com/store).
+When your Dock starts to have lots of things, it may sometimes even take a while for you
+to find the app you want!
 
-To learn more about Raycast -> [raycast.com](https://raycast.com) (not affiliated)
+But you can just do this instead:
 
-## Arc
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/NqLTZCYk/download" type="video/mp4">
+</video>
 
-Arc is probably the first tool I will install after Homebrew.
+No need to memorize where your app is in the Dock, just bring up Spotlight/Raycast, and type the first
+couple letters of the app you would like to launch and hit enter :)
 
-https://arc.net/gift/1f9c395b
+Once you get used to this, you will find that you don't need the Dock anymore.
+That part of the screen finally belongs to you.
 
-## AdGuard
+PS: For iPad users, just imagine if your iPad's Dock does not go away after you
+open an app, taking up space on the bottom of your screen forever. That would be a horrible
+UX, right? Yet that's exactly what we have on macOS right now if you do not hide your Dock!
 
-## 1Password
+## Raycast is a must-have
 
-## Rectangle
+After we ditch the useless full / split screen mode and the annoying Dock that
+drags down your productivity, we can finally start boosting our productivity.
+(It's like you should always get rid of your credit card debt before you start investing,
+because the debt easily outweighs the gain)
 
-## CleanShot X
+[Raycast](https://raycast.com) is a must-have for macOS users, it is a Spotlight replacement that allows you to
+so so much more.
 
-## Screen Studio
+Whether it is quickly looking up your calendar schedule:
 
-## LazyVim
+![Raycast Calendar](https://cscloud.itsjoeoui.com/FHzymVxK/download)
 
-## LazyGit
+Or searching for a file on your disk:
+
+![Raycast File](https://cscloud.itsjoeoui.com/g2NJCLXK/download)
+
+Or even searching through your clipboard history!
+
+![Raycast Clipboard](https://cscloud.itsjoeoui.com/R50BtddX/download)
+
+Kill a process that is slowing your computer down?
+
+![Raycast Process](https://cscloud.itsjoeoui.com/cQ9CYVPt/download)
+
+Query ChatGPT directly with a keyboard shortcut instead of opening your browser
+and navigate to chat.openai.com and then realize your auth has expired so you
+login again and then start typing your query and realize that your thought
+process has completely been interrupted?
+
+![Raycast AI](https://cscloud.itsjoeoui.com/Zpq6qtJ8/download)
+
+I can keep going with the list, creat a quick Google Meet meeting with the [Google Meet
+extension](https://www.raycast.com/vitoorgomes/google-meet), update a Linear issue with the [Linear extension](https://www.raycast.com/linear/linear),
+look up TailwindCSS docs with the [TailwindCSS extension](https://www.raycast.com/vimtor/tailwindcss)...
+
+The idea is, you can almost always find
+a Raycast extension for what you need :)
+
+## Have you tried Arc?
+
+Moving on to the browser space. We tend to spend a lot of time using our browser,
+and since we are spending so much time on it, we need to make sure it is nice and
+enjoyable.
+
+[Arc Browser](https://arc.net/) is the only browser that fits this criteria.
+
+It has the most delightful implementation of Chrome's Profile feature, allowing me
+to easily switch between my personal, study and work profile with a keyboard shortcut.
+Also note the ability to organize tabs into folders:
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/jCTxL3y7/download" type="video/mp4">
+</video>
+
+Moreover, the new AI features they rolled out last week: Ask on Page, and 5-Second Previews are super useful:
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/tlLffyBN/download" type="video/mp4">
+</video>
+
+<video width="1080" height="720" controls>
+  <source src="https://cscloud.itsjoeoui.com/vtcfHxL6/download" type="video/mp4">
+</video>
