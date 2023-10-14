@@ -1,7 +1,6 @@
 ---
-title: Boost Your Productivity on macOS
-date: 2023-10-01
-isDraft: true
+title: Boost Your Productivity on macOS [Part 1/2]
+date: 2023-10-14
 tags: ["macOS", "Productivity"]
 ---
 
@@ -74,7 +73,7 @@ This provides lots of benefits:
 
 One important thing that completes the Rectangle experience is 👇
 
-## Hiding your macOS Dock
+## Hiding Your macOS Dock
 
 In my opinion, the Dock takes up lots of screen real estate, but provides little to no value in return.
 
@@ -112,7 +111,7 @@ PS: For iPad users, just imagine if your iPad's Dock does not go away after you
 open an app, taking up space on the bottom of your screen forever. That would be a horrible
 UX, right? Yet that's exactly what we have on macOS right now if you do not hide your Dock!
 
-## Raycast is a must-have
+## Raycast Is a Must-Have
 
 After we ditch the useless full / split screen mode and the annoying Dock that
 drags down your productivity, we can finally start boosting our productivity.
@@ -152,7 +151,7 @@ look up TailwindCSS docs with the [TailwindCSS extension](https://www.raycast.co
 The idea is, you can almost always find
 a Raycast extension for what you need :)
 
-## Have you tried Arc?
+## Have You Tried Arc? Say Goodbye to Chrome
 
 Moving on to the browser space. We tend to spend a lot of time using our browser,
 and since we are spending so much time on it, we need to make sure it is nice and
@@ -178,7 +177,7 @@ Moreover, the new AI features they rolled out last week: Ask on Page, and 5-Seco
   <source src="https://assets.itsjoeoui.com/vtcfHxL6/download" type="video/mp4">
 </video>
 
-## The Best Screen Recorder - Screen Studio
+## Effortless Demo - Screen Studio
 
 Have you wondered how I made the animated screen recordings above?
 [Screen Studio](https://www.screen.studio/) is the answer.

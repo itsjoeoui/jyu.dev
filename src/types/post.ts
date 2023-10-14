@@ -4,7 +4,7 @@ export const Post = z.object({
   title: z.string(),
   tags: z.array(z.string()),
   img: z.string().optional(),
-  isDraft: z.boolean(),
+  isDraft: z.boolean().default(false),
   date: z.date(),
   author: z.string().default("Joey Yu"),
 });
