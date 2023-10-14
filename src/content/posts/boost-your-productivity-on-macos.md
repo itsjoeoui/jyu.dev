@@ -8,7 +8,7 @@ tags: ["macOS", "Productivity"]
 Have you ever seen people doing this on their Macs so they can have 2 windows side by side?
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/Qtlsghnj/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/Qtlsghnj/download" type="video/mp4">
 </video>
 
 I know, it is a bit painful to see how that 11 seconds just gone into waste there.
@@ -19,7 +19,7 @@ The answer is, **yes, and no**.
 Let's first take a look at how it would work if you use the split screen mode:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/wG35vvKC/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/wG35vvKC/download" type="video/mp4">
 </video>
 
 Based on my observation, this approach seems to be the most common when it comes to splitting the screen on macOS.
@@ -34,7 +34,7 @@ you may not remember where your split screen was. Then you start to swipe left a
 on your trackpad, trying to find your split screen.
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/wJBDJ8Hb/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/wJBDJ8Hb/download" type="video/mp4">
 </video>
 
 Not to mention that while you are typing your email, you may also be constantly
@@ -56,7 +56,7 @@ Let me show you how it works, by replicating the same scenario as above, only us
 keyboard shortcuts:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/yJJS4Fj7/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/yJJS4Fj7/download" type="video/mp4">
 </video>
 
 This provides lots of benefits:
@@ -90,7 +90,7 @@ There are 2 main ways to claim that screen real estate back:
 Compare the 2 following examples, one with the Dock and one without:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/Qt0vw9pn/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/Qt0vw9pn/download" type="video/mp4">
 </video>
 
 When your Dock starts to have lots of things, it may sometimes even take a while for you
@@ -99,7 +99,7 @@ to find the app you want!
 But you can just do this instead:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/NqLTZCYk/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/NqLTZCYk/download" type="video/mp4">
 </video>
 
 No need to memorize where your app is in the Dock, just bring up Spotlight/Raycast, and type the first
@@ -124,26 +124,26 @@ so so much more.
 
 Whether it is quickly looking up your calendar schedule:
 
-![Raycast Calendar](https://cscloud.itsjoeoui.com/FHzymVxK/download)
+![Raycast Calendar](https://assets.itsjoeoui.com/FHzymVxK/download)
 
 Or searching for a file on your disk:
 
-![Raycast File](https://cscloud.itsjoeoui.com/g2NJCLXK/download)
+![Raycast File](https://assets.itsjoeoui.com/g2NJCLXK/download)
 
 Or even searching through your clipboard history!
 
-![Raycast Clipboard](https://cscloud.itsjoeoui.com/R50BtddX/download)
+![Raycast Clipboard](https://assets.itsjoeoui.com/R50BtddX/download)
 
 Kill a process that is slowing your computer down?
 
-![Raycast Process](https://cscloud.itsjoeoui.com/cQ9CYVPt/download)
+![Raycast Process](https://assets.itsjoeoui.com/cQ9CYVPt/download)
 
 Query ChatGPT directly with a keyboard shortcut instead of opening your browser
 and navigate to chat.openai.com and then realize your auth has expired so you
 login again and then start typing your query and realize that your thought
 process has completely been interrupted?
 
-![Raycast AI](https://cscloud.itsjoeoui.com/Zpq6qtJ8/download)
+![Raycast AI](https://assets.itsjoeoui.com/Zpq6qtJ8/download)
 
 I can keep going with the list, creat a quick Google Meet meeting with the [Google Meet
 extension](https://www.raycast.com/vitoorgomes/google-meet), update a Linear issue with the [Linear extension](https://www.raycast.com/linear/linear),
@@ -165,15 +165,34 @@ to easily switch between my personal, study and work profile with a keyboard sho
 Also note the ability to organize tabs into folders:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/jCTxL3y7/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/jCTxL3y7/download" type="video/mp4">
 </video>
 
 Moreover, the new AI features they rolled out last week: Ask on Page, and 5-Second Previews are super useful:
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/tlLffyBN/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/tlLffyBN/download" type="video/mp4">
 </video>
 
 <video width="1080" height="720" controls>
-  <source src="https://cscloud.itsjoeoui.com/vtcfHxL6/download" type="video/mp4">
+  <source src="https://assets.itsjoeoui.com/vtcfHxL6/download" type="video/mp4">
 </video>
+
+## The Best Screen Recorder - Screen Studio
+
+Have you wondered how I made the animated screen recordings above?
+[Screen Studio](https://www.screen.studio/) is the answer.
+
+It allows me to quickly record demo footage like this with almost 0 effort as
+Screen Studio will automatically create all the animations for me, and it looks
+absolutely stunning!
+
+<video width="1080" height="720" controls>
+  <source src="https://assets.itsjoeoui.com/BznrpN8M/download" type="video/mp4">
+</video>
+
+It is by far the easiest way to create nice and quick product demos.
+
+After we take care of screen recording, let's also step up our screenshot game.
+
+## Reimagine Screenshot - CleanShot X
