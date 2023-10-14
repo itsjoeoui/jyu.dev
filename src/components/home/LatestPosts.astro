@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import PostCard from "@/components/shared/PostCard.astro";
 
 const publishedPostEntries = await getCollection("posts", ({ data }) => {
+
   return data.isDraft !== true;
 });
 ---

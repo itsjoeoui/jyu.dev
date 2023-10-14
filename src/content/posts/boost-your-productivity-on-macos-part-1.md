@@ -195,3 +195,36 @@ It is by far the easiest way to create nice and quick product demos.
 After we take care of screen recording, let's also step up our screenshot game.
 
 ## Reimagine Screenshot - CleanShot X
+
+I will skip over the most basic screenshot features, and jump straight into
+some unique aspects of [CleanShot X](https://cleanshot.com/).
+
+Long screenshot + great annotation tools:
+
+<video width="1080" height="720" controls>
+  <source src="https://assets.itsjoeoui.com/HSp1nsNq/download" type="video/mp4">
+</video>
+
+Super handy OCR feature, which automatically copies the text into your clipboard,
+and you can paste it to anywhere you like right away:
+
+<video width="1080" height="720" controls>
+  <source src="https://assets.itsjoeoui.com/x71CxTvJ/download" type="video/mp4">
+</video>
+
+And lastly, something that I get asked by others a lot, pinning screenshots!
+
+Imagine you are working with some JSON object, and you would love to see its
+schema side by side as you work on it, this is what I usually do:
+
+<video width="1080" height="720" controls>
+  <source src="https://assets.itsjoeoui.com/yYgvHrZn/download" type="video/mp4">
+</video>
+
+There are a lot more you can do with CleanShot X, this is only a small piece of
+the iceberg.
+
+There we go, this is the end of part 1. I hope you find it useful! I will be
+very happy if this helped you boost your productivity, even if it is just a little bit :)
+
+In part 2, I will dive deeper into my terminal setup with Tmux and Neovim. Stay tuned!
