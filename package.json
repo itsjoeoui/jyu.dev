@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier . --write"
+    "format": "prettier --plugin=prettier-plugin-astro --plugin=prettier-plugin-tailwindcss --write ."
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.2",

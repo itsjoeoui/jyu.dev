@@ -13,21 +13,22 @@ const { title, slug, date, isDraft } = Astro.props;
   href={`/posts/${slug}`}
   class="rounded-md border border-neutral-800 p-4 transition hover:bg-neutral-800"
 >
-  <div class="text-md flex items-center gap-1 text-neutral-300">
-    <div>
+  <div class="text-md flex flex-col gap-1 sm:flex-row sm:items-center">
+    <div class="text-neutral-300">
       {title}
     </div>
-    <div class="grow"></div>
-    {
-      isDraft && (
-        <>
-          <div class="text-sm text-neutral-500">Draft</div>
-          <div class="px-0.5" />
-        </>
-      )
-    }
-    <div>
-      {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+    <div class="sm:grow"></div>
+    <div class="flex">
+      {
+        isDraft && (
+          <div class="order-2 px-2 text-sm text-neutral-500 sm:order-1">
+            Draft
+          </div>
+        )
+      }
+      <div class="order-1 sm:order-2">
+        {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+      </div>
     </div>
   </div>
 </a>

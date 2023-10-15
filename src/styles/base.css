@@ -9,11 +9,11 @@
 }
 
 .post h3 {
-  @apply my-1 flex gap-1 text-xl text-neutral-300 font-semibold;
+  @apply my-1 flex gap-1 text-xl font-semibold text-neutral-300;
 }
 
 .post p {
-  @apply my-0.5 text-base leading-relaxed text-neutral-400 py-2;
+  @apply my-0.5 py-2 text-base leading-relaxed text-neutral-400;
 }
 
 .post li {
