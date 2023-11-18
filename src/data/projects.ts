@@ -8,6 +8,12 @@ export const projectsData: Project[] = [
     tags: ["TypeScript", "Next.js", "PostgreSQL", "Redis"],
   },
   {
+    name: "jyu.dev",
+    desc: "The current site you are looking at right now :)",
+    link: "https://jyu.dev",
+    tags: ["TypeScript", "Astro", "React", "FaunaDB"],
+  },
+  {
     name: "Flojoy Studio",
     desc: "An open-source, Python-based alternative to engineering software like LabVIEW.",
     link: "https://flojoy.ai",
@@ -31,10 +37,4 @@ export const projectsData: Project[] = [
     link: "https://ciena.com",
     tags: ["TypeScript", "React", "NestJS"],
   },
-  // {
-  //   name: "Dev Access",
-  //   desc: "A firewall access management service I built at Ciena.",
-  //   link: "https://ciena.com",
-  //   tags: ["TypeScript", "React", "NestJS"],
-  // },
 ];
