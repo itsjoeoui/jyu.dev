@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
   },
   {
     name: "Flojoy Studio",
-    desc: "An open-source, Python-based alternative to engineering software like LabVIEW.",
+    desc: "An open-source, Python-based alternative to engineering software like LabVIEW. Currently leading the product team to build the next generation Flojoy Studio IDE.",
     link: "https://flojoy.ai",
     tags: ["TypeScript", "React", "Python", "FastAPI"],
   },
@@ -27,13 +27,13 @@ export const projectsData: Project[] = [
   },
   {
     name: "Radish Battle Pass",
-    desc: "Winner of the Radish challenge at McHacks 23.",
+    desc: "Winner of the Radish challenge at McHacks 23. It is a battle pass reward system to boost customer engagement within the platform.",
     link: "https://ciena.com",
     tags: ["TypeScript", "React", "NestJS"],
   },
   {
     name: "Dev Access",
-    desc: "A firewall access management service I built at Ciena.",
+    desc: "A firewall access management service I built at Ciena. Allows all team members to whitelist their IP addresses in order to access the lab infrastructure.",
     link: "https://ciena.com",
     tags: ["TypeScript", "React", "NestJS"],
   },
