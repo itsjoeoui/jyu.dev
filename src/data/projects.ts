@@ -37,7 +37,7 @@ export const projectsData: Project[] = [
   {
     name: "Radish Battle Pass",
     desc: "Winner of the Radish challenge at McHacks 23. It is a battle pass reward system to boost customer engagement within the platform.",
-    link: "https://ciena.com",
+    link: "https://devpost.com/software/radish-battle-pass",
     tags: ["TypeScript", "React", "NestJS"],
     image: "/radish.png",
   },
