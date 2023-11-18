@@ -22,12 +22,12 @@ const { proj } = Astro.props;
 
   <div class="py-1"></div>
 
-  <div class="flex gap-2">
+  <div class="flex gap-2 flex-wrap">
     {
       proj.tags.map((tag) => (
-        <span class="rounded-xl bg-neutral-800 px-2 py-1 text-sm text-neutral-300 group-hover:bg-neutral-900">
+        <div class="rounded-xl bg-neutral-800 px-2 py-1 text-sm text-neutral-300 group-hover:bg-neutral-900">
           {tag}
-        </span>
+        </div>
       ))
     }
   </div>
