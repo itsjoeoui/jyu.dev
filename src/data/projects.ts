@@ -6,7 +6,7 @@ export const projectsData: Project[] = [
     desc: "An open-source link shortener (may be longer) service.",
     link: "https://link.jyu.dev",
     tags: ["TypeScript", "Next.js", "PostgreSQL", "Redis"],
-    image: "/link.png"
+    image: "/link.png",
   },
   {
     name: "jyu.dev",
@@ -19,14 +19,14 @@ export const projectsData: Project[] = [
     desc: "The accompany documentation site for Flojoy Studio, including all the building blocks that make up the Flojoy platform.",
     link: "https://docs.flojoy.ai",
     tags: ["TypeScript", "Astro", "React"],
-    image: "/docs.png"
+    image: "/docs.png",
   },
   {
     name: "Flojoy Studio",
     desc: "An open-source, Python-based alternative to engineering software like LabVIEW. Currently leading the product team to build the next generation Flojoy Studio IDE.",
     link: "https://flojoy.ai",
     tags: ["TypeScript", "React", "Python", "FastAPI"],
-    image: "/studio.png"
+    image: "/studio.png",
   },
   {
     name: "K8S on Budget",

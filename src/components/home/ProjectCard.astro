@@ -1,6 +1,6 @@
 ---
 import type { Project } from "@/types/project";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 type Props = {
   proj: Project;
@@ -24,13 +24,21 @@ const { proj } = Astro.props;
 
   <div class="py-1"></div>
 
-  {proj.image && 
-    <Image class="rounded-md border-neutral-800 border-2" src={proj.image} width="1080" height="675" alt={proj.name}/>
+  {
+    proj.image && (
+      <Image
+        class="rounded-md border-2 border-neutral-800"
+        src={proj.image}
+        width="1080"
+        height="675"
+        alt={proj.name}
+      />
+    )
   }
 
   <div class="py-1"></div>
 
-  <div class="flex gap-1 flex-wrap text-xs">
+  <div class="flex flex-wrap gap-1 text-xs">
     {
       proj.tags.map((tag) => (
         <div class="rounded-xl bg-neutral-800 px-2 py-1 text-neutral-300 group-hover:bg-neutral-900">
