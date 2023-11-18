@@ -1,5 +1,6 @@
 ---
 import type { Project } from "@/types/project";
+import { Image } from 'astro:assets';
 
 type Props = {
   proj: Project;
@@ -20,6 +21,12 @@ const { proj } = Astro.props;
   <div class="py-0.5"></div>
 
   <div class="text-sm text-neutral-400">{proj.desc}</div>
+
+  <div class="py-1"></div>
+
+  {proj.image && 
+    <Image class="rounded-md" src={proj.image} width="1080" height="675" alt={proj.name}/>
+  }
 
   <div class="py-1"></div>
 
