@@ -2,9 +2,7 @@
 import { getCollection } from "astro:content";
 import PostCard from "@/components/shared/PostCard.astro";
 
-const publishedPostEntries = await getCollection("posts", ({ data }) => {
-  return data.isDraft !== true;
-});
+const publishedPostEntries = await getCollection("posts");
 ---
 
 <div>
@@ -14,19 +12,22 @@ const publishedPostEntries = await getCollection("posts", ({ data }) => {
     <a href="/posts" class="hover:text-neutral-100">View all</a>
   </div>
   <div class="py-2"></div>
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-2">
     {
       publishedPostEntries.length !== 0 ? (
-        publishedPostEntries.map((post) => {
-          return (
-            <PostCard
-              title={post.data.title}
-              date={post.data.date}
-              slug={post.slug}
-              isDraft={post.data.isDraft}
-            />
-          );
-        })
+        publishedPostEntries
+          // .filter((post) => !post.data.isDraft)
+          .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+          .map((post) => {
+            return (
+              <PostCard
+                title={post.data.title}
+                date={post.data.date}
+                slug={post.slug}
+                isDraft={post.data.isDraft}
+              />
+            );
+          })
       ) : (
         <div>Coming soon...</div>
       )

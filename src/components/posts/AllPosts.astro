@@ -9,16 +9,18 @@ const publishedPostEntries = await getCollection("posts");
   <div class="flex flex-col gap-2">
     {
       publishedPostEntries.length !== 0 ? (
-        publishedPostEntries.map((post) => {
-          return (
-            <PostCard
-              title={post.data.title}
-              date={post.data.date}
-              slug={post.slug}
-              isDraft={post.data.isDraft}
-            />
-          );
-        })
+        publishedPostEntries
+          .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+          .map((post) => {
+            return (
+              <PostCard
+                title={post.data.title}
+                date={post.data.date}
+                slug={post.slug}
+                isDraft={post.data.isDraft}
+              />
+            );
+          })
       ) : (
         <div>Coming soon...</div>
       )
