@@ -1,8 +1,8 @@
 ---
 import Header from "@/components/shared/Header.astro";
 
-import "@fontsource/open-sans";
 import "../styles/base.css";
+import { AstroFont } from "astro-font";
 
 type Props = {
   title: string;
@@ -26,6 +26,18 @@ const { title } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <AstroFont
+    config={[
+      {
+        src: [],
+        preload: false,
+        display: "swap",
+        selector: "html",
+        name: "Open Sans",
+        fallback: "sans-serif",
+        googleFontsURL: 'https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400',
+      },
+    ]} />
   </head>
 
   <body
@@ -35,10 +47,4 @@ const { title } = Astro.props;
     <div class="py-4"></div>
     <slot />
   </body>
-
-  <style is:global>
-    html {
-      font-family: "Open Sans" cursive;
-    }
-  </style>
 </html>
