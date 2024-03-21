@@ -2,12 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
 // import { ModeToggle } from "@/components/mode-toggle";
+import EmailLink from "@/components/email-link.astro";
+import Today from "@/components/section/today.astro";
+import Projects from "@/components/section/projects.astro";
 ---
 
 <Layout title="jyu.dev">
   <div class="flex flex-col md:flex-row">
-    <div class="order-last md:order-first">Left panel</div>
+    <div class="order-last md:order-first">
+      <Today />
+      <div class="py-4"></div>
+      <Projects />
+      <div class="py-4"></div>
+    </div>
     <div class="grow min-w-32 min-h-4"></div>
-    <div class="order-first md:order-last">Right panel</div>
+    <div class="order-first md:order-last">
+      <EmailLink />
+    </div>
   </div>
 </Layout>
