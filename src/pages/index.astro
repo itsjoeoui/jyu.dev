@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
 // import { ModeToggle } from "@/components/mode-toggle";
 import EmailLink from "@/components/email-link.astro";
+import DiscordStatus from "@/components/discord-status";
 import Today from "@/components/section/today.astro";
 import Projects from "@/components/section/projects.astro";
+import { config } from "@/config/site";
 ---
 
 <Layout title="jyu.dev">
@@ -16,8 +18,10 @@ import Projects from "@/components/section/projects.astro";
       <div class="py-4"></div>
     </div>
     <div class="grow min-w-32 min-h-4"></div>
-    <div class="order-first md:order-last">
+    <div class="order-first md:order-last md:text-right">
       <EmailLink />
+      <div class="py-2"></div>
+      <DiscordStatus userId={config.discordUserId} client:load />
     </div>
   </div>
 </Layout>
