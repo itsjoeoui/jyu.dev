@@ -1,5 +1,20 @@
 ---
 import SectionHeading from "@/components/section-heading.astro";
+import { config } from "@/config/site";
 ---
 
 <SectionHeading title="Projects" />
+
+<ul class="text-muted-foreground space-y-2 list-disc list-inside">
+  {
+    config.projects.map((p) => (
+      <li>
+        <a href={p.link} target="_blank">
+          <span class="underline hover:text-primary">{p.title}</span>
+        </a>
+        - {p.description}
+      </li>
+    ))
+  }
+  <li>...</li>
+</ul>
