@@ -1,4 +1,5 @@
 type Config = {
+  description: string;
   email: string;
   discordUserId: string;
   projects: Project[];
@@ -17,6 +18,7 @@ type Contact = {
 };
 
 export const config: Config = {
+  description: "Joey Yu - Software Engineer - joey@jyu.dev",
   email: "joey@jyu.dev",
   discordUserId: "481294021054955533",
   projects: [
