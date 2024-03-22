@@ -62,6 +62,10 @@ export const config: Config = {
       link: "https://github.com/itsjoeoui",
     },
     {
+      name: "Twitch",
+      link: "https://twitch.com/itsjoeoui",
+    },
+    {
       name: "LinkedIn",
       link: "https://linkedin.com/in/itsjoeoui/",
     },
