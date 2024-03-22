@@ -1,0 +1,15 @@
+---
+import { config } from "@/config/site";
+---
+
+<ul class="text-muted-foreground text-nowrap flex gap-2 md:block">
+  {
+    config.contacts.map((c) => (
+      <li>
+        <a href={c.link} target="_blank">
+          <span class="underline hover:text-primary">{c.name}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

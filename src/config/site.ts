@@ -2,11 +2,17 @@ type Config = {
   email: string;
   discordUserId: string;
   projects: Project[];
+  contacts: Contact[];
 };
 
 type Project = {
   title: string;
   description: string;
+  link: string;
+};
+
+type Contact = {
+  name: string;
   link: string;
 };
 
@@ -48,6 +54,20 @@ export const config: Config = {
       title: "Radish Battle Pass",
       description: "Tier-based loyalty reward system",
       link: "https://devpost.com/software/radish-battle-pass",
+    },
+  ],
+  contacts: [
+    {
+      name: "GitHub",
+      link: "https://github.com/itsjoeoui",
+    },
+    {
+      name: "LinkedIn",
+      link: "https://linkedin.com/in/itsjoeoui/",
+    },
+    {
+      name: "15-minute Chat",
+      link: "https://cal.com/itsjoeoui/",
     },
   ],
 };
