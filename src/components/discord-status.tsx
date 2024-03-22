@@ -44,12 +44,27 @@ function ActivityDisplay({ activity }: { activity: Activity }) {
   }, []);
 
   return (
-    <div className="whitespace-nowrap">
-      <div>{activity.name}</div>
-      <div>{activity.details}</div>
-      <div>{activity.state}</div>
-      {elapsedTime && <div>{convertMilisecondsToHMS(elapsedTime)} elapsed</div>}
-    </div>
+    <>
+      <div className="whitespace-nowrap md:hidden">
+        <div>
+          {activity.name} - {activity.details}
+        </div>
+        <div>
+          {activity.state} -{" "}
+          {elapsedTime && (
+            <span>{convertMilisecondsToHMS(elapsedTime)} elapsed</span>
+          )}
+        </div>
+      </div>
+      <div className="whitespace-nowrap hidden md:block">
+        <div>{activity.name}</div>
+        <div>{activity.details}</div>
+        <div>{activity.state}</div>
+        {elapsedTime && (
+          <div>{convertMilisecondsToHMS(elapsedTime)} elapsed</div>
+        )}
+      </div>
+    </>
   );
 }
 

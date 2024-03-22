@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
-// import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/mode-toggle";
 import EmailLink from "@/components/email-link.astro";
 import Contact from "@/components/contact.astro";
 import DiscordStatus from "@/components/discord-status";
@@ -20,12 +20,29 @@ import { config } from "@/config/site";
     </div>
     <div class="grow min-w-32 min-h-4"></div>
     <div class="order-first md:order-last md:text-right">
-      <EmailLink />
+      <div class="flex md:block">
+        <EmailLink />
+
+        <div class="grow"></div>
+
+        <div class="md:hidden">
+          <ModeToggle client:load />
+        </div>
+      </div>
+
       <div class="py-2"></div>
+
       <Contact />
 
       <div class="py-2"></div>
+
       <DiscordStatus userId={config.discordUserId} client:load />
+
+      <div class="py-2"></div>
+
+      <div class="hidden md:block">
+        <ModeToggle client:load />
+      </div>
     </div>
   </div>
 </Layout>

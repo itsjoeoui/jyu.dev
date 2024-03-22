@@ -1,13 +1,10 @@
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, SunMoon } from "lucide-react";
+
+import { match } from "ts-pattern";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
@@ -28,25 +25,21 @@ export function ModeToggle() {
   }, [theme]);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setThemeState("theme-light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setThemeState("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setThemeState("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button variant="ghost" size="icon" className={cn("h-6 w-6")}>
+      {match(theme)
+        .with("theme-light", () => (
+          <Sun className="h-6 w-6" onClick={() => setThemeState("dark")} />
+        ))
+        .with("dark", () => (
+          <Moon className="h-6 w-6" onClick={() => setThemeState("system")} />
+        ))
+        .with("system", () => (
+          <SunMoon
+            className="h-6 w-6"
+            onClick={() => setThemeState("theme-light")}
+          />
+        ))
+        .exhaustive()}
+    </Button>
   );
 }
