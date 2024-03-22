@@ -45,7 +45,7 @@ function ActivityDisplay({ activity }: { activity: Activity }) {
 
   return (
     <>
-      <div className="whitespace-nowrap md:hidden">
+      <div className="md:hidden">
         <div>
           {activity.name} - {activity.details}
         </div>
