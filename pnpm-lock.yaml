@@ -20,6 +20,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.5.8)(tailwindcss@3.4.1)
+  '@fingerprintjs/fingerprintjs':
+    specifier: ^4.2.2
+    version: 4.2.2
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.67)(react@18.2.0)
@@ -969,6 +972,12 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fingerprintjs/fingerprintjs@4.2.2:
+    resolution: {integrity: sha512-scD+pDgNZW78LuFAr7ms2yxmDx2NWC4+K5iiOjPT2ZlTlHFbLsORUzLJI2rcKicxxLtHbvf3A7BU1drVr4iHGg==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
