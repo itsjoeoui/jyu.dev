@@ -57,6 +57,11 @@ export const config: Config = {
       description: "Tier-based loyalty reward system",
       link: "https://devpost.com/software/radish-battle-pass",
     },
+    {
+      title: "Astro: Star Formation",
+      description: "Physics simulation of star formation",
+      link: "https://devpost.com/software/star-formation",
+    },
   ],
   contacts: [
     {
