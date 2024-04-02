@@ -1,3 +1,5 @@
 # jyu.dev
 
-![jyu.dev](./public/jyu_dev.jpeg)
+![Home Dark](./public/home_dark.jpeg)
+
+![Home Light](./public/home_light.jpeg)
