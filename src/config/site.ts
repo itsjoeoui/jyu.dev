@@ -50,7 +50,7 @@ export const config: Config = {
     },
     {
       title: "jyu.dev",
-      description: "The site you are looking at right now :)",
+      description: "The site you are looking at right now :P",
       link: "https://github.com/itsjoeoui/jyu.dev",
     },
     {
