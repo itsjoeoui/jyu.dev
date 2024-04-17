@@ -31,7 +31,7 @@ export const config: Config = {
     {
       title: "Fijoy",
       description: "Personal finance management platform for everyone",
-      link: "https://github.com/itsjoeoui/fijoy",
+      link: "https://fijoy.app",
     },
     {
       title: "Flojoy Cloud",
