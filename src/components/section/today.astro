@@ -1,27 +1,33 @@
 ---
 import SectionHeading from "@/components/section-heading.astro";
+import { config } from "@/config/site";
 ---
 
 <SectionHeading title="Today" />
 <p class="text-muted-foreground leading-relaxed">
-  I am a founding software engineer at <a
-    class="underline hover:text-primary"
-    href="https://github.com/flojoy-ai">Flojoy</a
-  >, working on Flojoy Studio and Flojoy Cloud. Meanwhile, I study at McGill
-  University, and I am building <a
+  Hi! My name is <span class="text-primary">Joey</span> 👋. I'm passionate about
+  building software in the <span class="text-primary">fintech</span>
+  space! I am currently working on <a
     href="https://github.com/itsjoeoui/fijoy"
-    class="underline hover:text-primary">Fijoy</a
-  > behind the scene.
+    class="text-primary">Fijoy</a
+  >, a personal finance management app that helps people take control of their
+  financial life.
 </p>
 
 <div class="py-1"></div>
 
 <p class="text-muted-foreground leading-relaxed">
-  Interested in the <span class="font-bold">Fintech</span> space (which is the reason
-  I am building <a
-    href="https://github.com/itsjoeoui/fijoy"
-    class="underline hover:text-primary">Fijoy</a
-  >)! Please reach out if you have any fun projects or opportunities :)
+  During the day, I work at <a href="https://flojoy.ai" class="text-primary"
+    >Flojoy</a
+  >, building the data cloud for hardware testing data.
+</p>
+
+<div class="py-1"></div>
+
+<p class="text-muted-foreground leading-relaxed">
+  If you have any fun projects, especially in the fintech space, or if you need
+  help with anything, feel free to send an email to
+  <a href={`mailto:${config.email}`} class="text-primary">{config.email}</a>!
 </p>
 
 <div class="py-1"></div>
