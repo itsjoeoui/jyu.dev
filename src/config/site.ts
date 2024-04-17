@@ -112,7 +112,7 @@ export const config: Config = {
       link: "https://github.com/itsjoeoui",
     },
     {
-      name: "X / Twitter",
+      name: "X",
       link: "https://x.com/itsjoeoui",
     },
     {
