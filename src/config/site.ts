@@ -112,6 +112,10 @@ export const config: Config = {
       link: "https://github.com/itsjoeoui",
     },
     {
+      name: "X / Twitter",
+      link: "https://x.com/itsjoeoui",
+    },
+    {
       name: "Twitch",
       link: "https://twitch.com/itsjoeoui",
     },
@@ -120,7 +124,7 @@ export const config: Config = {
       link: "https://linkedin.com/in/itsjoeoui/",
     },
     {
-      name: "15-minute Chat",
+      name: "Let's chat!",
       link: "https://cal.com/itsjoeoui/",
     },
   ],
