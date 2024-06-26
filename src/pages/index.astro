@@ -13,10 +13,34 @@ import astro from '../assets/joey.jpeg'
 import { getAllPosts, sortMDByDate } from '@/utils'
 import { personalConfig } from '@/site-config'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = [
+	'TypeScript',
+	'JavaScript',
+	'Python',
+	'Golang',
+	'Java',
+	'Ruby',
+	'C',
+	'C++',
+	'Rust',
+	'Clojure',
+	'OCaml',
+	'Lua'
+]
+const frontend = ['React', 'Next.js', 'Astro', 'Electron', 'Tailwind CSS', 'TanStack', 'Docusaurus']
+const backend = ['FastAPI', 'Flask', 'Elysia', 'net/http', 'Chi', 'Gin']
+const databases = ['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Redis', 'FaunaDB']
+const others = [
+	'gRPC',
+	'Docker',
+	'Connect',
+	'Terraform',
+	'GitHub Actions',
+	'GitLab Runners',
+	'AWS',
+	'GCP',
+	'Azure'
+]
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -87,56 +111,61 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				Perpetual Learner. Software Engineer. Student at McGill University.
 			</p>
 		</Section>
-		{
-			allPostsByDate.length > 0 && (
-				<Section title='Posts'>
-					<ul class='flex flex-col gap-y-2'>
-						{allPostsByDate.map((p) => (
-							<li class='flex flex-col gap-x-2 sm:flex-row'>
-								<PostPreview post={p} />
-							</li>
-						))}
-					</ul>
-				</Section>
-			)
-		}
+
+		<!-- { -->
+		<!-- 	allPostsByDate.length > 0 && ( -->
+		<!-- 		<Section title='Posts'> -->
+		<!-- 			<ul class='flex flex-col gap-y-2'> -->
+		<!-- 				{allPostsByDate.map((p) => ( -->
+		<!-- 					<li class='flex flex-col gap-x-2 sm:flex-row'> -->
+		<!-- 						<PostPreview post={p} /> -->
+		<!-- 					</li> -->
+		<!-- 				))} -->
+		<!-- 			</ul> -->
+		<!-- 		</Section> -->
+		<!-- 	) -->
+		<!-- } -->
 
 		<Section title='Experience'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				heading='Wealthsimple'
+				subheading='Software Engineer Intern'
+				date='Sep 2024 - Dec 2024'
+				imagePath='/src/assets/wealthsimple.png'
+				altText='Wealthsimple - Software Engineer Intern'
+				imageClass='h-12 w-auto md:-left-16 rounded-full p-0.5'
 			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
+				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+				<!-- <li>Transfer Team</li> -->
+				<!-- </ul> -->
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Flojoy'
+				subheading='Founding Software Engineer'
+				date='May 2023 - May 2024'
+				imagePath='/src/assets/flojoy.png'
+				altText='Flojoy - Founding Software Engineer'
 				imageClass='h-12 w-auto md:-left-16'
+			/>
+
+			<Card
+				heading='Ciena'
+				subheading='Software Engineer Intern'
+				date='May 2021 - May 2023'
+				imagePath='/src/assets/ciena.png'
+				altText='Ciena - Software Engineer Intern'
+				imageClass='h-12 w-auto md:-left-16 p-0.5 rounded-full'
 			/>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				heading='McGill University'
+				subheading='Computer Science and Statistics'
+				date='Sep 2022 - Present'
+				imagePath='/src/assets/mcgill.jpeg'
+				altText='McGill University - Computer Science and Statistics'
+				imageClass='h-12 w-auto md:-left-16 rounded-full p-0.5'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>
@@ -147,69 +176,71 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</li>
 				</ul>
 			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
+			<!-- <Card -->
+			<!-- 	heading='Lorem Ipsum' -->
+			<!-- 	subheading='Sit amet consectetur' -->
+			<!-- 	date='Dec 2022 - Nov 2023' -->
+			<!-- 	imagePath='/src/assets/about-astro.png' -->
+			<!-- 	altText='Lorem, ipsum dolor sit' -->
+			<!-- 	imageClass='h-12 w-auto md:-left-16' -->
+			<!-- /> -->
 		</Section>
 
-		<Section title='Projects'>
-			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
-				<ProjectCard
-					href='https://www.google.com'
-					heading='Consectetur'
-					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-					imagePath='/src/assets/coming-soon.png'
-					altText='Example'
-					class='w-full sm:w-1/2'
-				/>
-				<ProjectCard
-					as='div'
-					heading='Coming soon...'
-					subheading=''
-					imagePath='/src/assets/coming-soon.png'
-					altText='Lorem, ipsum dolor sit'
-					class='w-full sm:w-1/2'
-				/>
-			</div>
-		</Section>
+		<!-- <Section title='Projects'> -->
+		<!-- 	<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'> -->
+		<!-- 		<ProjectCard -->
+		<!-- 			href='https://www.google.com' -->
+		<!-- 			heading='Consectetur' -->
+		<!-- 			subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.' -->
+		<!-- 			imagePath='/src/assets/coming-soon.png' -->
+		<!-- 			altText='Example' -->
+		<!-- 			class='w-full sm:w-1/2' -->
+		<!-- 		/> -->
+		<!-- 		<ProjectCard -->
+		<!-- 			as='div' -->
+		<!-- 			heading='Coming soon...' -->
+		<!-- 			subheading='' -->
+		<!-- 			imagePath='/src/assets/coming-soon.png' -->
+		<!-- 			altText='Lorem, ipsum dolor sit' -->
+		<!-- 			class='w-full sm:w-1/2' -->
+		<!-- 		/> -->
+		<!-- 	</div> -->
+		<!-- </Section> -->
 
-		<Section title='Certifications'>
-			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
-			/>
-			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
-			/>
-		</Section>
+		<!-- <Section title='Certifications'> -->
+		<!-- 	<Card -->
+		<!-- 		as='a' -->
+		<!-- 		heading='Lorem ipsum, dolor sit amet consectetur adipisicing.' -->
+		<!-- 		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.' -->
+		<!-- 		date='Mar 2024 - Mar 2024' -->
+		<!-- 		imagePath='/src/assets/about-astro.png' -->
+		<!-- 		altText='Lorem, ipsum dolor sit' -->
+		<!-- 		imageClass='h-11 w-auto md:-left-16' -->
+		<!-- 		href='https://www.google.com' -->
+		<!-- 	/> -->
+		<!-- 	<Card -->
+		<!-- 		as='a' -->
+		<!-- 		heading='Lorem ipsum, dolor sit amet' -->
+		<!-- 		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.' -->
+		<!-- 		date='Mar 2029 - Mar 2032' -->
+		<!-- 		imagePath='/src/assets/about-astro.png' -->
+		<!-- 		altText='Lorem, ipsum dolor sit' -->
+		<!-- 		imageClass='h-11 w-auto md:-left-16' -->
+		<!-- 		href='https://www.google.com' -->
+		<!-- 	/> -->
+		<!-- </Section> -->
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
+			<SkillLayout title='Databases' skills={databases} />
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
 	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
+		href={personalConfig.calendar}
+		target='_blank'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
 		<span class='relative flex items-center justify-center'>
@@ -219,6 +250,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
 		</span>
 
-		<p class='font-medium'>Get free template</p>
+		<p class='font-medium'>Let's chat</p>
 	</a>
 </PageLayout>

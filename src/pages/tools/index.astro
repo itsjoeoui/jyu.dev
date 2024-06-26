@@ -3,15 +3,15 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
-const DESIGN = [
-	{
-		name: 'Figma',
-		description: 'Design Tool',
-		href: 'https://www.figma.com/',
-		iconPath: 'figma',
-		iconBgColour: '#000001'
-	}
-]
+// const DESIGN = [
+// 	{
+// 		name: 'Figma',
+// 		description: 'Design Tool',
+// 		href: 'https://www.figma.com/',
+// 		iconPath: 'figma',
+// 		iconBgColour: '#000001'
+// 	}
+// ]
 
 const PRODUCTIVITY = [
 	{
@@ -21,16 +21,16 @@ const PRODUCTIVITY = [
 		iconPath: 'arc',
 		iconBgColour: '#414350'
 	},
-	{
-		name: 'Notion',
-		description: 'Note Taking',
-		href: 'https://www.notion.so/product',
-		iconPath: 'notion',
-		iconBgColour: '#EFEFEE'
-	},
+	// {
+	// 	name: 'Notion',
+	// 	description: 'Note Taking',
+	// 	href: 'https://www.notion.so/product',
+	// 	iconPath: 'notion',
+	// 	iconBgColour: '#EFEFEE'
+	// },
 	{
 		name: 'Obsidian',
-		description: 'Long-form Writing',
+		description: 'Note Taking',
 		href: 'https://obsidian.md/',
 		iconPath: 'obsidian',
 		iconBgColour: '#7A3EE8'
@@ -39,10 +39,10 @@ const PRODUCTIVITY = [
 
 const DEVELOPMENT = [
 	{
-		name: 'VS Code',
+		name: 'Neovim',
 		description: 'IDE',
-		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
+		href: 'https://neovim.io/',
+		iconPath: 'devicon:neovim',
 		iconBgColour: '#2C2C32'
 	},
 	{
@@ -79,7 +79,7 @@ const DEVELOPMENT = [
 				<p>Tools and software I use daily</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
+			<!-- <ToolSection title='Design' tools={DESIGN} /> -->
 			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
 			<ToolSection title='Development' tools={DEVELOPMENT} />
 		</div>
