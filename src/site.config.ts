@@ -1,4 +1,4 @@
-import type { SiteConfig } from '@/types'
+import type { PersonalConfig, SiteConfig } from '@/types'
 import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
@@ -21,6 +21,14 @@ export const siteConfig: SiteConfig = {
 			year: 'numeric'
 		}
 	}
+}
+
+export const personalConfig: PersonalConfig = {
+	linkedin: 'https://linkedin.com/in/itsjoeoui/',
+	github: 'https://github.com/itsjoeoui/',
+	calendar: 'https://cal.com/itsjoeoui/30min',
+	email: 'joey@jyu.dev',
+	name: 'Joey Yu'
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [

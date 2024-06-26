@@ -1,5 +1,5 @@
 ---
-
+import { personalConfig } from '@/site-config'
 ---
 
 <header class='mb-12 flex w-full flex-wrap pb-3 text-sm sm:flex-nowrap sm:justify-start'>
@@ -7,7 +7,11 @@
 		class='relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center'
 		aria-label='global'
 	>
-		<a class='flex-none text-xl font-semibold' href='/' aria-label='Brand'>joey@jyu.dev</a>
+		<a
+			class='flex-none text-xl font-semibold'
+			href={`mailto:${personalConfig.email}`}
+			aria-label='Brand'>{personalConfig.email}</a
+		>
 
 		<div class='flex flex-row items-center justify-center gap-x-5 sm:gap-x-7'>
 			<a

@@ -11,6 +11,7 @@ import { Image } from 'astro:assets'
 import astro from '../assets/joey.jpeg'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
+import { personalConfig } from '@/site-config'
 
 const languages = ['lorem', 'ipsum']
 const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
@@ -35,7 +36,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>Joey Yu</h1>
 				<a
-					href='https://cal.com/itsjoeoui'
+					href={personalConfig.calendar}
 					target='_blank'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 				>
@@ -65,12 +66,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label
-						title='Connect on Linkedin'
-						as='a'
-						href='https://www.linkedin.com/in/itsjoeoui/'
-						target='_blank'
-					>
+					<Label title='Connect on Linkedin' as='a' href={personalConfig.linkedin} target='_blank'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 16 16'
@@ -88,10 +84,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				Perpetual Learner. Software Engineer. Student at McGill University.
 			</p>
 		</Section>
 		{

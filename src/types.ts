@@ -22,3 +22,11 @@ export type SiteMeta = {
 	ogImage?: string | undefined
 	articleDate?: string | undefined
 }
+
+export type PersonalConfig = {
+	email: string
+	github: string
+	linkedin: string
+	calendar: string
+	name: string
+}
