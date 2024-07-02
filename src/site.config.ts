@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
 export const personalConfig: PersonalConfig = {
 	linkedin: 'https://linkedin.com/in/itsjoeoui/',
 	github: 'https://github.com/itsjoeoui/',
-	calendar: 'https://cal.com/itsjoeoui/30min',
+	calendar: 'https://cal.com/itsjoeoui/15min',
 	email: 'joey@jyu.dev',
 	name: 'Joey Yu'
 }
