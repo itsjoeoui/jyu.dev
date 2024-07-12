@@ -1,0 +1,84 @@
+---
+import PageLayout from '@/layouts/BaseLayout.astro'
+import ToolSection from '@/components/ToolSection.astro'
+import Button from '@/components/Button.astro'
+
+// const DESIGN = [
+// 	{
+// 		name: 'Figma',
+// 		description: 'Design Tool',
+// 		href: 'https://www.figma.com/',
+// 		iconPath: 'figma',
+// 		iconBgColour: '#000001'
+// 	}
+// ]
+
+const FINANCE = [
+	{
+		name: 'American Express Cobalt Card',
+		description: 'The best credit card in Canada',
+		href: 'https://americanexpress.com/en-ca/referral/cobalt?ref=xIAOWY08nV&XL=MIMNS',
+		iconPath: 'amex',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'American Express Green Card',
+		description: 'Great beginner card to get into Amex',
+		href: 'https://americanexpress.com/en-ca/referral/green-card?ref=xIAOWYURMD&XL=MIMNS',
+		iconPath: 'amex',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'American Express SimplyCash Card',
+		description: 'Good no fee cashback card',
+		href: 'https://americanexpress.com/en-ca/referral/simplycash?ref=xIAOWYL93K&XL=MIMNS',
+		iconPath: 'amex',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'Wealthsimple',
+		description: 'Best platform for Canadian stocks and ETFs',
+		href: 'https://my.wealthsimple.com/app/public/trade-referral-signup?code=HCAT-A',
+		iconPath: 'wealthsimple',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'Interactive Brokers',
+		description: 'Best platform for US stocks and ETFs',
+		href: 'https://ibkr.com/referral/xiaowei656',
+		iconPath: 'ibkr',
+		iconBgColour: '#414350'
+	}
+]
+---
+
+<PageLayout meta={{ title: 'Referals' }}>
+	<div class='w-full'>
+		<Button title='Back' href='/' style='button'>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width='14'
+				height='14'
+				viewBox='0 0 24 24'
+				slot='icon-before'
+			>
+				<path
+					fill='currentColor'
+					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
+				>
+				</path>
+			</svg>
+		</Button>
+
+		<div class='mt-5 flex w-full flex-col gap-y-10'>
+			<div>
+				<h1 class='mb-1 text-2xl font-bold'>Referals</h1>
+				<p>Some referal links to services that I personally use and enjoy :)</p>
+			</div>
+
+			<!-- <ToolSection title='Design' tools={DESIGN} /> -->
+			<ToolSection title='Finance' tools={FINANCE} />
+			<!-- <ToolSection title='Development' tools={DEVELOPMENT} /> -->
+		</div>
+	</div>
+</PageLayout>
