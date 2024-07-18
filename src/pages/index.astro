@@ -10,7 +10,7 @@ import SkillLayout from '../components/SkillLayout.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
-import astro from '../assets/joey.jpeg'
+import pfp from '../assets/pfp.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 import { personalConfig } from '@/site-config'
@@ -53,7 +53,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
-				src={astro}
+				src={pfp}
 				alt='profile pic'
 				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
 				loading='eager'
