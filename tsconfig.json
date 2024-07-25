@@ -6,12 +6,7 @@
 		"baseUrl": ".",
 		"lib": ["es2022", "dom", "dom.iterable"],
 		"paths": {
-			"@/assets/*": ["src/assets/*"],
-			"@/components/*": ["src/components/*"],
-			"@/layouts/*": ["src/layouts/*"],
-			"@/utils": ["src/utils/index.ts"],
-			"@/types": ["src/types.ts"],
-			"@/site-config": ["src/site.config.ts"]
+			"@/*": ["src/*"]
 		}
 	},
 	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
