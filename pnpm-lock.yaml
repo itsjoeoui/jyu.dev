@@ -14,6 +14,9 @@ importers:
       '@astrojs/mdx':
         specifier: ^2.1.1
         version: 2.1.1(astro@4.4.15(typescript@5.4.2))
+      '@astrojs/partytown':
+        specifier: ^2.1.1
+        version: 2.1.1
       '@astrojs/rss':
         specifier: ^4.0.5
         version: 4.0.5
@@ -159,6 +162,9 @@ packages:
     peerDependencies:
       astro: ^4.0.0
 
+  '@astrojs/partytown@2.1.1':
+    resolution: {integrity: sha512-KvecQuGGgrDrdTjC5awmtoQXqJFinChfeizKBJyr7F5EGQPx62xq8SIWkcXamLr5xZyNw0lryKeLtIzbxRH/zw==}
+
   '@astrojs/prism@3.0.0':
     resolution: {integrity: sha512-g61lZupWq1bYbcBnYZqdjndShr/J3l/oFobBKPA3+qMat146zce3nz2kdO4giGbhYDt4gYdhmoBz0vZJ4sIurQ==}
     engines: {node: '>=18.14.1'}
@@ -294,6 +300,11 @@ packages:
   '@babel/types@7.24.0':
     resolution: {integrity: sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==}
     engines: {node: '>=6.9.0'}
+
+  '@builder.io/partytown@0.10.2':
+    resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   '@ctrl/tinycolor@3.6.1':
     resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==}
@@ -2482,6 +2493,10 @@ packages:
   mlly@1.6.1:
     resolution: {integrity: sha512-vLgaHvaeunuOXHSmEbZ9izxPx3USsk8KCQ8iC+aTlp5sKRSoZvwhHh5L9VbKSaVC6sJDqbyohIS76E2VmHIPAA==}
 
+  mrmime@2.0.0:
+    resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
+    engines: {node: '>=10'}
+
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
@@ -3753,6 +3768,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@astrojs/partytown@2.1.1':
+    dependencies:
+      '@builder.io/partytown': 0.10.2
+      mrmime: 2.0.0
+
   '@astrojs/prism@3.0.0':
     dependencies:
       prismjs: 1.29.0
@@ -3953,6 +3973,8 @@ snapshots:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+
+  '@builder.io/partytown@0.10.2': {}
 
   '@ctrl/tinycolor@3.6.1': {}
 
@@ -6752,6 +6774,8 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.0.3
       ufo: 1.5.3
+
+  mrmime@2.0.0: {}
 
   ms@2.1.2: {}
 

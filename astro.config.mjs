@@ -8,8 +8,9 @@ import rehypeExternalLinks from 'rehype-external-links'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
-
 import vercel from '@astrojs/vercel/serverless'
+
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +22,8 @@ export default defineConfig({
 		}),
 		sitemap(),
 		mdx(),
-		icon()
+		icon(),
+		partytown({ config: { forward: ['dataLayer.push'] } })
 	],
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
@@ -43,6 +45,9 @@ export default defineConfig({
 	prefetch: true,
 	output: 'server',
 	adapter: vercel({
-		webAnalytics: { enabled: true }
+		webAnalytics: {
+			enabled: true
+		}
 	})
 })
+

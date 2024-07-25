@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header.astro'
 import ThemeProvider from '@/components/ThemeProvider.astro'
 
 import { siteConfig } from '@/site-config'
+import GoogleAnalytics from '@/components/GoogleAnalytics.astro'
 
 interface Props {
 	meta: SiteMeta
@@ -19,6 +20,8 @@ const {
 
 <html lang={siteConfig.lang} class=''>
 	<head>
+		<!-- TODO: set env var -->
+		<GoogleAnalytics measurementId={'G-YRNNH0D1PM'} />
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
 
