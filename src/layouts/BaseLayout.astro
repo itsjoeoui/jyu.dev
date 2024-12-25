@@ -1,5 +1,6 @@
 ---
 import type { SiteMeta } from '@/types'
+import { ClientRouter } from 'astro:transitions'
 
 import BaseHead from '@/components/BaseHead.astro'
 import Footer from '@/components/layout/Footer.astro'
@@ -23,6 +24,8 @@ const {
 		<!-- TODO: set env var -->
 		<GoogleAnalytics measurementId={'G-YRNNH0D1PM'} />
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+
+		<ClientRouter />
 	</head>
 
 	<body class='flex justify-center bg-background'>
