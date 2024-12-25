@@ -11,17 +11,17 @@
 		"lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\""
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.10",
-		"@astrojs/mdx": "^2.3.1",
+		"@astrojs/check": "^0.9.4",
+		"@astrojs/mdx": "^4.0.3",
 		"@astrojs/partytown": "^2.1.2",
 		"@astrojs/rss": "^4.0.10",
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^5.1.4",
-		"@astrojs/vercel": "^7.8.2",
+		"@astrojs/vercel": "^8.0.1",
 		"@iconify-json/devicon": "^1.2.10",
 		"@vercel/analytics": "^1.4.1",
-		"astro": "^4.16.18",
-		"astro-expressive-code": "^0.33.5",
+		"astro": "^5.1.1",
+		"astro-expressive-code": "^0.38.3",
 		"astro-icon": "^1.1.4",
 		"clsx": "^2.1.1",
 		"lucide-astro": "^0.469.0",
@@ -43,8 +43,8 @@
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"prettier": "^3.4.2",
 		"prettier-config-standard": "^7.0.0",
-		"prettier-plugin-astro": "^0.13.0",
-		"prettier-plugin-tailwindcss": "^0.5.14"
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.6.9"
 	},
 	"packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }
