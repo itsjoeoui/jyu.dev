@@ -12,6 +12,8 @@ import vercel from '@astrojs/vercel/serverless'
 
 import partytown from '@astrojs/partytown'
 
+import sanity from '@sanity/astro'
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://jyu.dev',
@@ -23,7 +25,12 @@ export default defineConfig({
 		sitemap(),
 		mdx(),
 		icon(),
-		partytown({ config: { forward: ['dataLayer.push'] } })
+		partytown({ config: { forward: ['dataLayer.push'] } }),
+		sanity({
+			projectId: '9zcu1jb0',
+			dataset: 'production',
+			useCdn: false // for static builds
+		})
 	],
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
