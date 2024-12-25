@@ -8,7 +8,7 @@ import GitHubIcon from '../icons/GitHub.astro'
 import LinkedInIcon from '../icons/LinkedIn.astro'
 
 // import { Icon } from 'astro-icon/components'
-// import ProjectCard from '../components/ProjectCard.astro'
+import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 // import PostPreview from '@/components/blog/PostPreview.astro'
@@ -141,41 +141,28 @@ const others = [
 			<Card
 				heading='Shopify'
 				subheading='Software Engineer Intern'
-				date='Jan 2025 - Apr 2025 (Incoming)'
+				date='Jan 2025 - Present'
 				imagePath='/src/assets/shopify.png'
 				altText='Shopify - Software Engineer Intern'
 				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
 				link='https://www.shopify.com'
 			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- 	<li>Institutional Transfers Team</li> -->
-				<!-- </ul> -->
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Infrastructure Engineering - Observability</li>
+				</ul>
 			</Card>
 			<Card
 				heading='Wealthsimple'
 				subheading='Software Engineer Intern'
-				date='Sep 2024 - Present'
+				date='Sep 2024 - Dec 2024'
 				imagePath='/src/assets/wealthsimple.png'
 				altText='Wealthsimple - Software Engineer Intern'
 				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
 				link='https://www.wealthsimple.com'
 			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- 	<li>Institutional Transfers Team</li> -->
-				<!-- </ul> -->
-			</Card>
-			<Card
-				heading='Fijoy'
-				subheading='Founder'
-				date='May 2024 - Present'
-				imagePath='/src/assets/fijoy-gradient.png'
-				altText='Fijoy - Founder'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				link='https://fijoy.app'
-			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- <li>Transfer Team</li> -->
-				<!-- </ul> -->
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Product Engineering - Institutional Transfers</li>
+				</ul>
 			</Card>
 			<Card
 				heading='Flojoy'
@@ -210,7 +197,7 @@ const others = [
 			<Card
 				heading='McGill University'
 				subheading='Computer Science and Statistics'
-				date='Sep 2022 - Present'
+				date='Sep 2022 - April 2026'
 				imagePath='/src/assets/mcgill.jpeg'
 				altText='McGill University - Computer Science and Statistics'
 				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
@@ -225,59 +212,22 @@ const others = [
 				<!-- </li> -->
 				<!-- </ul> -->
 			</Card>
-			<!-- <Card -->
-			<!-- 	heading='Lorem Ipsum' -->
-			<!-- 	subheading='Sit amet consectetur' -->
-			<!-- 	date='Dec 2022 - Nov 2023' -->
-			<!-- 	imagePath='/src/assets/about-astro.png' -->
-			<!-- 	altText='Lorem, ipsum dolor sit' -->
-			<!-- 	imageClass='h-12 w-auto md:-left-16' -->
-			<!-- /> -->
 		</Section>
 
-		<!-- <Section title='Projects'> -->
-		<!-- 	<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'> -->
-		<!-- 		<ProjectCard -->
-		<!-- 			href='https://www.google.com' -->
-		<!-- 			heading='Consectetur' -->
-		<!-- 			subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.' -->
-		<!-- 			imagePath='/src/assets/coming-soon.png' -->
-		<!-- 			altText='Example' -->
-		<!-- 			class='w-full sm:w-1/2' -->
-		<!-- 		/> -->
-		<!-- 		<ProjectCard -->
-		<!-- 			as='div' -->
-		<!-- 			heading='Coming soon...' -->
-		<!-- 			subheading='' -->
-		<!-- 			imagePath='/src/assets/coming-soon.png' -->
-		<!-- 			altText='Lorem, ipsum dolor sit' -->
-		<!-- 			class='w-full sm:w-1/2' -->
-		<!-- 		/> -->
-		<!-- 	</div> -->
-		<!-- </Section> -->
-
-		<!-- <Section title='Certifications'> -->
-		<!-- 	<Card -->
-		<!-- 		as='a' -->
-		<!-- 		heading='Lorem ipsum, dolor sit amet consectetur adipisicing.' -->
-		<!-- 		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.' -->
-		<!-- 		date='Mar 2024 - Mar 2024' -->
-		<!-- 		imagePath='/src/assets/about-astro.png' -->
-		<!-- 		altText='Lorem, ipsum dolor sit' -->
-		<!-- 		imageClass='h-11 w-auto md:-left-16' -->
-		<!-- 		href='https://www.google.com' -->
-		<!-- 	/> -->
-		<!-- 	<Card -->
-		<!-- 		as='a' -->
-		<!-- 		heading='Lorem ipsum, dolor sit amet' -->
-		<!-- 		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.' -->
-		<!-- 		date='Mar 2029 - Mar 2032' -->
-		<!-- 		imagePath='/src/assets/about-astro.png' -->
-		<!-- 		altText='Lorem, ipsum dolor sit' -->
-		<!-- 		imageClass='h-11 w-auto md:-left-16' -->
-		<!-- 		href='https://www.google.com' -->
-		<!-- 	/> -->
-		<!-- </Section> -->
+		<Section title='Projects'>
+			<Card
+				heading='Fijoy'
+				subheading='Joyful net worth tracking for everyone'
+				imagePath='/src/assets/fijoy-gradient.png'
+				altText='Fijoy - Joyful net worth tracking for everyone'
+				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
+				link='https://fijoy.app'
+			>
+				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+				<!-- <li>Transfer Team</li> -->
+				<!-- </ul> -->
+			</Card>
+		</Section>
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
