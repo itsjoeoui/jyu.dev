@@ -13,6 +13,6 @@ const { class: className, as: Tag = 'div', title, href, ...props } = Astro.props
 	href={href}
 	{...props}
 >
-	<slot name='icon' />
+	<slot />
 	<p>{title}</p>
 </Tag>
