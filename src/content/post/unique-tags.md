@@ -1,8 +1,8 @@
 ---
-title: "Unique tags validation"
-publishDate: "30 January 2023"
-description: "This post is used for validating if duplicate tags are removed, regardless of the string case"
-tags: ["blog", "blog", "Blog", "test", "bloG", "Test", "BLOG"]
+title: 'Unique tags validation'
+publishDate: '30 January 2023'
+description: 'This post is used for validating if duplicate tags are removed, regardless of the string case'
+tags: ['blog', 'blog', 'Blog', 'test', 'bloG', 'Test', 'BLOG']
 ---
 
 ## This post is to test zod transform

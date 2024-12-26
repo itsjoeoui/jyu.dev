@@ -17,10 +17,7 @@ const { class: className, title, tools, ...props } = Astro.props
 ---
 
 <div
-	class={cn(
-		className,
-		'flex flex-col rounded-xl border border-border py-5 px-3 gap-y-4 sm:gap-y-6'
-	)}
+	class={cn(className, 'flex flex-col rounded-xl border border-border p-4 gap-y-4 sm:gap-y-6')}
 	{...props}
 >
 	<h2 class='px-2 text-lg font-medium'>{title}</h2>
@@ -28,7 +25,7 @@ const { class: className, title, tools, ...props } = Astro.props
 		{
 			tools.map((tool) => (
 				<a
-					class='group relative hover:bg-transparent '
+					class='group relative hover:bg-transparent'
 					href={tool.href}
 					id={tool.name}
 					target='_blank'

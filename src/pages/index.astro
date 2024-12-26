@@ -16,6 +16,7 @@ import pfp from '@/assets/pfp.png'
 // } from '@/utils'
 import { personalConfig } from '@/site.config'
 import { Icon } from 'astro-icon/components'
+import Chat from '@/components/Chat.astro'
 
 const languages = [
 	'TypeScript',
@@ -64,20 +65,7 @@ const others = [
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>{personalConfig.name}</h1>
-				<a
-					href={personalConfig.calendar}
-					target='_blank'
-					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
-						<span
-							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-						></span>
-						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
-
-					<p class='font-medium'>Let's chat</p>
-				</a>
+				<Chat />
 
 				<div class='grid grid-cols-2 gap-4 md:grid-cols-4'>
 					<Label title='Shopify' as='a' href={'https://shopify.com'} target='_blank'>
@@ -232,18 +220,8 @@ const others = [
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
-	<a
-		href={personalConfig.calendar}
-		target='_blank'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-	>
-		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-		</span>
 
-		<p class='font-medium'>Let's chat</p>
-	</a>
+	<div class='py-4'></div>
+
+	<Chat />
 </PageLayout>
