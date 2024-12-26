@@ -1,7 +1,6 @@
 ---
 import { personalConfig } from '@/site.config'
-import LinkedInIcon from '@/icons/LinkedIn.astro'
-import GitHubIcon from '@/icons/GitHub.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <footer class='mx-auto mt-24 w-full'>
@@ -32,7 +31,7 @@ import GitHubIcon from '@/icons/GitHub.astro'
 						aria-label='GitHub'
 						href={personalConfig.github}
 					>
-						<GitHubIcon />
+						<Icon name='github' class='h-4 w-4' />
 					</a>
 					<!-- Linkedin -->
 					<a
@@ -41,7 +40,7 @@ import GitHubIcon from '@/icons/GitHub.astro'
 						aria-label='LinkedIn'
 						href={personalConfig.linkedin}
 					>
-						<LinkedInIcon />
+						<Icon name='linkedin' class='h-4 w-4' />
 					</a>
 				</div>
 				<!-- End Social Brands -->
