@@ -1,90 +1,92 @@
 ---
-import PageLayout from '@/layouts/BaseLayout.astro'
-import ToolSection from '@/components/ToolSection.astro'
-import Button from '@/components/Button.astro'
-import { Icon } from 'astro-icon/components'
+import PageLayout from "@/layouts/BaseLayout.astro";
+import ToolSection from "@/components/ToolSection.astro";
+import Button from "@/components/Button.astro";
+import { Icon } from "astro-icon/components";
 
 const PRODUCTIVITY = [
-	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
-	},
-	{
-		name: 'TickTick',
-		description: 'To-do List & Calendar',
-		href: 'https://www.ticktick.com/',
-		iconPath: 'ticktick',
-		iconBgColour: '#EFEFEE'
-	},
-	{
-		name: 'Raycast',
-		description: 'App Launcher',
-		href: 'https://www.raycast.com/',
-		iconPath: 'raycast',
-		iconBgColour: '#EFEFEE'
-	},
-	{
-		name: 'Obsidian',
-		description: 'Note Taking',
-		href: 'https://obsidian.md/',
-		iconPath: 'obsidian',
-		iconBgColour: '#7A3EE8'
-	}
-]
+  {
+    name: "Arc",
+    description: "Browser",
+    href: "https://arc.net/",
+    iconPath: "arc",
+    iconBgColour: "#414350",
+  },
+  {
+    name: "TickTick",
+    description: "To-do List & Calendar",
+    href: "https://www.ticktick.com/",
+    iconPath: "ticktick",
+    iconBgColour: "#EFEFEE",
+  },
+  {
+    name: "Raycast",
+    description: "App Launcher",
+    href: "https://www.raycast.com/",
+    iconPath: "raycast",
+    iconBgColour: "#EFEFEE",
+  },
+  {
+    name: "Obsidian",
+    description: "Note Taking",
+    href: "https://obsidian.md/",
+    iconPath: "obsidian",
+    iconBgColour: "#7A3EE8",
+  },
+];
 
 const DEVELOPMENT = [
-	{
-		name: 'Neovim',
-		description: 'IDE',
-		href: 'https://neovim.io/',
-		iconPath: 'devicon:neovim',
-		iconBgColour: '#2C2C32'
-	},
-	{
-		name: 'Alacritty',
-		description: 'Terminal',
-		href: 'https://github.com/alacritty/alacritty',
-		iconPath: 'alacritty',
-		iconBgColour: '#2C2C32'
-	},
-	{
-		name: 'tmux',
-		description: 'Terminal Multiplexer',
-		href: 'https://github.com/tmux/tmux',
-		iconPath: 'tmux',
-		iconBgColour: '#2C2C32'
-	}
-]
+  {
+    name: "Neovim",
+    description: "IDE",
+    href: "https://neovim.io/",
+    iconPath: "devicon:neovim",
+    iconBgColour: "#2C2C32",
+  },
+  {
+    name: "Alacritty",
+    description: "Terminal",
+    href: "https://github.com/alacritty/alacritty",
+    iconPath: "alacritty",
+    iconBgColour: "#2C2C32",
+  },
+  {
+    name: "tmux",
+    description: "Terminal Multiplexer",
+    href: "https://github.com/tmux/tmux",
+    iconPath: "tmux",
+    iconBgColour: "#2C2C32",
+  },
+];
 
 const HARDWARE = [
-	{
-		name: 'MacBook Pro 14-inch, 2021',
-		description: 'Apple M1 Pro, 16GB',
-		href: 'https://apple.com/',
-		iconPath: 'apple',
-		iconBgColour: '#2C2C32'
-	}
-]
+  {
+    name: "MacBook Pro 14-inch, 2021",
+    description: "Apple M1 Pro, 16GB",
+    href: "https://apple.com/",
+    iconPath: "apple",
+    iconBgColour: "#2C2C32",
+  },
+];
 ---
 
-<PageLayout meta={{ title: 'Tools', description: 'Tools and software I use daily' }}>
-	<div class='w-full'>
-		<Button title='Back' href='/' style='button'>
-			<Icon name='back' class='' slot='icon-before' />
-		</Button>
+<PageLayout
+  meta={{ title: "Tools", description: "Tools and software I use daily" }}
+>
+  <div class="w-full">
+    <Button title="Back" href="/" style="button">
+      <Icon name="back" class="" slot="icon-before" />
+    </Button>
 
-		<div class='mt-5 flex w-full flex-col gap-y-10'>
-			<div>
-				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
-				<p>Tools and software I use daily</p>
-			</div>
+    <div class="mt-5 flex w-full flex-col gap-y-10">
+      <div>
+        <h1 class="mb-1 text-2xl font-bold">Tools</h1>
+        <p>Tools and software I use daily</p>
+      </div>
 
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
-			<ToolSection title='Hardware' tools={HARDWARE} />
-		</div>
-	</div>
+      <ToolSection title="Productivity" tools={PRODUCTIVITY} />
+      <ToolSection title="Development" tools={DEVELOPMENT} />
+      <ToolSection title="Hardware" tools={HARDWARE} />
+    </div>
+  </div>
 </PageLayout>

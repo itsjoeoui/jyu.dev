@@ -1,227 +1,262 @@
 ---
-import PageLayout from '@/layouts/BaseLayout.astro'
-import Section from '@/components/Section.astro'
-import Card from '@/components/Card.astro'
+import PageLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import Card from "@/components/Card.astro";
 
-import Label from '@/components/Label.astro'
-import SkillLayout from '@/components/SkillLayout.astro'
+import Label from "@/components/Label.astro";
+import SkillLayout from "@/components/SkillLayout.astro";
 // import PostPreview from '@/components/blog/PostPreview.astro'
 
-import { Image } from 'astro:assets'
-import pfp from '@/assets/pfp.png'
+import { Image } from "astro:assets";
+import pfp from "@/assets/pfp.png";
 
 // import {
 // 	getAllPosts
 // 	sortMDByDate
 // } from '@/utils'
-import { personalConfig } from '@/site.config'
-import { Icon } from 'astro-icon/components'
-import Chat from '@/components/Chat.astro'
+import { personalConfig } from "@/site.config";
+import { Icon } from "astro-icon/components";
+import Chat from "@/components/Chat.astro";
 
 const languages = [
-	'TypeScript',
-	'JavaScript',
-	'Python',
-	'Golang',
-	'Java',
-	'Ruby',
-	'C',
-	'C++',
-	'Rust',
-	'Clojure',
-	'OCaml',
-	'Lua'
-]
-const frontend = ['React', 'Next.js', 'Astro', 'Electron', 'Tailwind CSS', 'TanStack', 'Docusaurus']
-const backend = ['FastAPI', 'Flask', 'Elysia', 'net/http', 'Chi', 'Gin']
-const databases = ['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Redis', 'FaunaDB']
+  "TypeScript",
+  "JavaScript",
+  "Python",
+  "Golang",
+  "Java",
+  "Ruby",
+  "C",
+  "C++",
+  "Rust",
+  "Clojure",
+  "OCaml",
+  "Lua",
+];
+const frontend = [
+  "React",
+  "Next.js",
+  "Astro",
+  "Electron",
+  "Tailwind CSS",
+  "TanStack",
+  "Docusaurus",
+];
+const backend = ["FastAPI", "Flask", "Elysia", "net/http", "Chi", "Gin"];
+const databases = [
+  "PostgreSQL",
+  "MySQL",
+  "SQLite",
+  "MongoDB",
+  "Redis",
+  "FaunaDB",
+];
 const others = [
-	'gRPC',
-	'GraphQL',
-	'Docker',
-	'Connect',
-	'Terraform',
-	'GitHub Actions',
-	'GitLab Runners',
-	'AWS',
-	'GCP',
-	'Azure'
-]
+  "gRPC",
+  "GraphQL",
+  "Docker",
+  "Connect",
+  "Terraform",
+  "GitHub Actions",
+  "GitLab Runners",
+  "AWS",
+  "GCP",
+  "Azure",
+];
 
 // const MAX_POSTS = 10
 // const allPosts = await getAllPosts()
 // const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
-	<div class='flex w-full flex-col gap-y-10'>
-		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={pfp}
-				alt='profile pic'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
-				loading='eager'
-			/>
+<PageLayout meta={{ title: "Home" }}>
+  <div class="flex w-full flex-col gap-y-10">
+    <section class="flex flex-col items-center gap-y-7">
+      <Image
+        src={pfp}
+        alt="profile pic"
+        class="h-28 w-auto rounded-full bg-[#FFBE98] p-2"
+        loading="eager"
+      />
 
-			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>{personalConfig.name}</h1>
-				<Chat />
+      <div class="flex flex-col items-center gap-y-4">
+        <h1 class="text-3xl font-bold">{personalConfig.name}</h1>
+        <Chat />
 
-				<div class='grid grid-cols-2 gap-4 md:grid-cols-4'>
-					<Label title='Shopify' as='a' href={'https://shopify.com'} target='_blank'>
-						<Icon name='work' class='h-6 w-6' />
-					</Label>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <Label
+            title="Shopify"
+            as="a"
+            href={"https://shopify.com"}
+            target="_blank"
+          >
+            <Icon name="work" class="h-6 w-6" />
+          </Label>
 
-					<Label title='Montreal' as='a' href={'https://g.co/kgs/1FZ4j1g'} target='_blank'>
-						<Icon name='location' class='h-6 w-6' />
-					</Label>
+          <Label
+            title="Montreal"
+            as="a"
+            href={"https://g.co/kgs/1FZ4j1g"}
+            target="_blank"
+          >
+            <Icon name="location" class="h-6 w-6" />
+          </Label>
 
-					<Label title='GitHub' as='a' href={personalConfig.github} target='_blank'>
-						<Icon name='github' class='h-6 w-6' />
-					</Label>
+          <Label
+            title="GitHub"
+            as="a"
+            href={personalConfig.github}
+            target="_blank"
+          >
+            <Icon name="github" class="h-6 w-6" />
+          </Label>
 
-					<Label title='Linkedin' as='a' href={personalConfig.linkedin} target='_blank'>
-						<Icon name='linkedin' class='h-6 w-6' />
-					</Label>
-				</div>
-			</div>
-		</section>
+          <Label
+            title="Linkedin"
+            as="a"
+            href={personalConfig.linkedin}
+            target="_blank"
+          >
+            <Icon name="linkedin" class="h-6 w-6" />
+          </Label>
+        </div>
+      </div>
+    </section>
 
-		<Section title='About'>
-			<p class='text-muted-foreground'>
-				Perpetual Learner. Software Engineer. <br /> Building <a
-					href='https://fijoy.app'
-					target='_blank'>fijoy.app</a
-				>. <br /> Love finance & investing.
-				<br /> Student at McGill University.
-			</p>
-		</Section>
+    <Section title="About">
+      <p class="text-muted-foreground">
+        Perpetual Learner. Software Engineer. <br /> Building <a
+          href="https://fijoy.app"
+          target="_blank">fijoy.app</a
+        >. <br /> Love finance & investing.
+        <br /> Student at McGill University.
+      </p>
+    </Section>
 
-		<!-- { -->
-		<!-- 	allPostsByDate.length > 0 && ( -->
-		<!-- 		<Section title='Posts'> -->
-		<!-- 			<ul class='flex flex-col gap-y-2'> -->
-		<!-- 				{allPostsByDate.map((p) => ( -->
-		<!-- 					<li class='flex flex-col gap-x-2 sm:flex-row'> -->
-		<!-- 						<PostPreview post={p} /> -->
-		<!-- 					</li> -->
-		<!-- 				))} -->
-		<!-- 			</ul> -->
-		<!-- 		</Section> -->
-		<!-- 	) -->
-		<!-- } -->
+    <!-- { -->
+    <!-- 	allPostsByDate.length > 0 && ( -->
+    <!-- 		<Section title='Posts'> -->
+    <!-- 			<ul class='flex flex-col gap-y-2'> -->
+    <!-- 				{allPostsByDate.map((p) => ( -->
+    <!-- 					<li class='flex flex-col gap-x-2 sm:flex-row'> -->
+    <!-- 						<PostPreview post={p} /> -->
+    <!-- 					</li> -->
+    <!-- 				))} -->
+    <!-- 			</ul> -->
+    <!-- 		</Section> -->
+    <!-- 	) -->
+    <!-- } -->
 
-		<Section title='Experience'>
-			<Card
-				heading='Meta'
-				subheading='Software Engineer Intern'
-				date='May 2025 - Aug 2025 (Incoming)'
-				imagePath='/src/assets/meta.png'
-				altText='Meta - Software Engineer Intern'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				href='https://www.meta.com'
-			/>
-			<Card
-				heading='Shopify'
-				subheading='Software Engineer Intern'
-				date='Jan 2025 - Present'
-				imagePath='/src/assets/shopify.png'
-				altText='Shopify - Software Engineer Intern'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				href='https://www.shopify.com'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Infrastructure Engineering - Observability</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Wealthsimple'
-				subheading='Software Engineer Intern'
-				date='Sep 2024 - Dec 2024 (4 months)'
-				imagePath='/src/assets/wealthsimple.png'
-				altText='Wealthsimple - Software Engineer Intern'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				href='https://www.wealthsimple.com'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Product Engineering - Institutional Transfers</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Flojoy'
-				subheading='Founding Software Engineer'
-				date='May 2023 - May 2024 (1 year)'
-				imagePath='/src/assets/flojoy.png'
-				altText='Flojoy - Founding Software Engineer'
-				imageClass='h-12 w-auto md:-left-16'
-				href='https://www.flojoy.ai'
-			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
-				<!-- </ul> -->
-			</Card>
+    <Section title="Experience">
+      <Card
+        heading="Meta"
+        subheading="Software Engineer Intern"
+        date="May 2025 - Aug 2025 (Incoming)"
+        imagePath="/src/assets/meta.png"
+        altText="Meta - Software Engineer Intern"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://www.meta.com"
+      />
+      <Card
+        heading="Shopify"
+        subheading="Software Engineer Intern"
+        date="Jan 2025 - Present"
+        imagePath="/src/assets/shopify.png"
+        altText="Shopify - Software Engineer Intern"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://www.shopify.com"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>Infrastructure Engineering - Observability</li>
+        </ul>
+      </Card>
+      <Card
+        heading="Wealthsimple"
+        subheading="Software Engineer Intern"
+        date="Sep 2024 - Dec 2024 (4 months)"
+        imagePath="/src/assets/wealthsimple.png"
+        altText="Wealthsimple - Software Engineer Intern"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://www.wealthsimple.com"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>Product Engineering - Institutional Transfers</li>
+        </ul>
+      </Card>
+      <Card
+        heading="Flojoy"
+        subheading="Founding Software Engineer"
+        date="May 2023 - May 2024 (1 year)"
+        imagePath="/src/assets/flojoy.png"
+        altText="Flojoy - Founding Software Engineer"
+        imageClass="h-12 w-auto md:-left-16"
+        href="https://www.flojoy.ai"
+      >
+        <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+        <!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
+        <!-- </ul> -->
+      </Card>
 
-			<Card
-				heading='Ciena'
-				subheading='Software Engineer Intern'
-				date='May 2021 - May 2023 (2 years)'
-				imagePath='/src/assets/ciena.png'
-				altText='Ciena - Software Engineer Intern'
-				imageClass='h-12 w-auto md:-left-16 p-0.5 rounded-xl'
-				href='https://ciena.com'
-			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
-				<!-- </ul> -->
-			</Card>
-		</Section>
+      <Card
+        heading="Ciena"
+        subheading="Software Engineer Intern"
+        date="May 2021 - May 2023 (2 years)"
+        imagePath="/src/assets/ciena.png"
+        altText="Ciena - Software Engineer Intern"
+        imageClass="h-12 w-auto md:-left-16 p-0.5 rounded-xl"
+        href="https://ciena.com"
+      >
+        <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+        <!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
+        <!-- </ul> -->
+      </Card>
+    </Section>
 
-		<Section title='Education'>
-			<Card
-				heading='McGill University'
-				subheading='Computer Science and Statistics'
-				date='Sep 2022 - April 2026'
-				imagePath='/src/assets/mcgill.jpeg'
-				altText='McGill University - Computer Science and Statistics'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				href='https://www.mcgill.ca'
-			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- <li> -->
-				<!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut -->
-				<!-- molestiae laboriosam pariatur! -->
+    <Section title="Education">
+      <Card
+        heading="McGill University"
+        subheading="Computer Science and Statistics"
+        date="Sep 2022 - April 2026"
+        imagePath="/src/assets/mcgill.jpeg"
+        altText="McGill University - Computer Science and Statistics"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://www.mcgill.ca"
+      >
+        <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+        <!-- <li> -->
+        <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut -->
+        <!-- molestiae laboriosam pariatur! -->
 
-				<!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li> -->
-				<!-- </li> -->
-				<!-- </ul> -->
-			</Card>
-		</Section>
+        <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li> -->
+        <!-- </li> -->
+        <!-- </ul> -->
+      </Card>
+    </Section>
 
-		<Section title='Projects'>
-			<Card
-				heading='Fijoy'
-				subheading='Joyful net worth tracking for everyone'
-				imagePath='/src/assets/fijoy-gradient.png'
-				altText='Fijoy - Joyful net worth tracking for everyone'
-				imageClass='h-12 w-auto md:-left-16 rounded-xl p-0.5'
-				href='https://fijoy.app'
-			>
-				<!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-				<!-- <li>Transfer Team</li> -->
-				<!-- </ul> -->
-			</Card>
-		</Section>
+    <Section title="Projects">
+      <Card
+        heading="Fijoy"
+        subheading="Joyful net worth tracking for everyone"
+        imagePath="/src/assets/fijoy-gradient.png"
+        altText="Fijoy - Joyful net worth tracking for everyone"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://fijoy.app"
+      >
+        <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
+        <!-- <li>Transfer Team</li> -->
+        <!-- </ul> -->
+      </Card>
+    </Section>
 
-		<Section title='Skills'>
-			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Databases' skills={databases} />
-			<SkillLayout title='Others' skills={others} />
-		</Section>
-	</div>
+    <Section title="Skills">
+      <SkillLayout title="Languages" skills={languages} />
+      <SkillLayout title="Frontend" skills={frontend} />
+      <SkillLayout title="Backend" skills={backend} />
+      <SkillLayout title="Databases" skills={databases} />
+      <SkillLayout title="Others" skills={others} />
+    </Section>
+  </div>
 
-	<div class='py-4'></div>
+  <div class="py-4"></div>
 
-	<Chat />
+  <Chat />
 </PageLayout>

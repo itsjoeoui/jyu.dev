@@ -1,45 +1,46 @@
 ---
-import { personalConfig } from '@/site.config'
-import { Icon } from 'astro-icon/components'
+import { personalConfig } from "@/site.config";
+import { Icon } from "astro-icon/components";
 ---
 
-<footer class='mx-auto mt-8 w-full'>
-	<div class='border-t border-border pt-5'>
-		<div
-			class='flex flex-col items-center gap-y-3 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-y-0'
-		>
-			<div class='flex gap-x-4 text-sm'>
-				<p class=''>
-					© {new Date().getUTCFullYear()}, {personalConfig.name}. All rights reserved.
-				</p>
-			</div>
+<footer class="mx-auto mt-8 w-full">
+  <div class="border-t border-border pt-5">
+    <div
+      class="flex flex-col items-center gap-y-3 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-y-0"
+    >
+      <div class="flex gap-x-4 text-sm">
+        <p class="">
+          © {new Date().getUTCFullYear()}, {personalConfig.name}. All rights
+          reserved.
+        </p>
+      </div>
 
-			<div class='flex items-center justify-between'>
-				<div class='flex items-center gap-x-2'>
-					<!-- Email -->
-					<a href={'mailto:' + personalConfig.email}>{personalConfig.email}</a>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-x-2">
+          <!-- Email -->
+          <a href={"mailto:" + personalConfig.email}>{personalConfig.email}</a>
 
-					<!-- GitHub -->
-					<a
-						class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
-						target='_blank'
-						aria-label='GitHub'
-						href={personalConfig.github}
-					>
-						<Icon name='github' class='h-4 w-4' />
-					</a>
+          <!-- GitHub -->
+          <a
+            class="inline-block text-muted-foreground transition-all hover:text-muted-foreground/75"
+            target="_blank"
+            aria-label="GitHub"
+            href={personalConfig.github}
+          >
+            <Icon name="github" class="h-4 w-4" />
+          </a>
 
-					<!-- Linkedin -->
-					<a
-						class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
-						target='_blank'
-						aria-label='LinkedIn'
-						href={personalConfig.linkedin}
-					>
-						<Icon name='linkedin' class='h-4 w-4' />
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+          <!-- Linkedin -->
+          <a
+            class="inline-block text-muted-foreground transition-all hover:text-muted-foreground/75"
+            target="_blank"
+            aria-label="LinkedIn"
+            href={personalConfig.linkedin}
+          >
+            <Icon name="linkedin" class="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
