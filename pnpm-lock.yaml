@@ -56,9 +56,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      lucide-astro:
-        specifier: ^0.469.0
-        version: 0.469.0(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1))
       mdast-util-to-string:
         specifier: ^4.0.0
         version: 4.0.0
@@ -4563,11 +4560,6 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
-
-  lucide-astro@0.469.0:
-    resolution: {integrity: sha512-JHj98KsiJ3VZE4jWUNlV1gVcTBDp8zzDt9FCrWoUUQUqM8ak/hqWRGkweqsa07HtrjjNiM6SVvBvxh1fna5fRg==}
-    peerDependencies:
-      astro: '>=2.7.1'
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
@@ -12380,10 +12372,6 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
-
-  lucide-astro@0.469.0(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1)):
-    dependencies:
-      astro: 5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1)
 
   magic-string@0.30.17:
     dependencies:
