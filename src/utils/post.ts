@@ -21,7 +21,6 @@ export function sortMDByDate(posts: SanityDocument[]) {
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
 export function getAllTags(posts: SanityDocument[]) {
-  console.log(posts);
   return posts.flatMap((post) => [...post.tags]);
 }
 

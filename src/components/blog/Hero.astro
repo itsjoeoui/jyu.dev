@@ -32,9 +32,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 {post.isDraft ? <span class="text-red-500">(Draft)</span> : null}
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
   <p class="text-xs">
-    <FormattedDate date={new Date(post.publishedAt)} dateTimeOptions={dateTimeOptions} /> /{
-      " "
-    }
+    <FormattedDate
+      date={new Date(post.publishedAt)}
+      dateTimeOptions={dateTimeOptions}
+    /> /{" "}
     <!-- {remarkPluginFrontmatter.minutesRead} -->
   </p>
 </div>
@@ -62,19 +63,19 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
         <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
         <path d="M6 9h-.01" />
       </svg>
-      <!-- {post.tags.map((tag, i) => ( -->
-      <!--   <div> -->
-      <!--     <a -->
-      <!--       aria-label={`View more blogs with the tag ${tag}`} -->
-      <!--       class="inline-block before:content-['#'] hover:underline hover:underline-offset-4" -->
-      <!--       data-pagefind-filter="tag" -->
-      <!--       href={`/tags/${tag}/`} -->
-      <!--     > -->
-      <!--       {tag} -->
-      <!--     </a> -->
-      <!--     {i < post.tags.length - 1 && ", "} -->
-      <!--   </div> -->
-      <!-- ))} -->
+      {post.tags.map((tag, i) => (
+        <div>
+          <a
+            aria-label={`View more blogs with the tag ${tag}`}
+            class="inline-block before:content-['#'] hover:underline hover:underline-offset-4"
+            data-pagefind-filter="tag"
+            href={`/tags/${tag}/`}
+          >
+            {tag}
+          </a>
+          {i < post.tags.length - 1 && ", "}
+        </div>
+      ))}
     </div>
   )
 }

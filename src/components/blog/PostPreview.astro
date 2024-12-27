@@ -10,7 +10,6 @@ type Props<Tag extends HTMLTag = HTMLTag> = Polymorphic<{ as: Tag }> & {
 };
 
 const { as: Tag = "div", post, withDesc = false } = Astro.props;
-console.log(post);
 const postDate = post.publishedAt;
 ---
 
