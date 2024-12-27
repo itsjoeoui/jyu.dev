@@ -1,48 +1,33 @@
 ---
-import type { CollectionEntry } from "astro:content";
-
 import BlogHero from "@/components/blog/Hero.astro";
-import TOC from "@/components/blog/TOC.astro";
+// import TOC from "@/components/blog/TOC.astro";
 import Button from "@/components/Button.astro";
 
 import PageLayout from "./BaseLayout.astro";
+import type { SanityDocument } from "@sanity/client";
+import { Icon } from "astro-icon/components";
 
 interface Props {
-  post: CollectionEntry<"post">;
+  post: SanityDocument;
 }
 
 const { post } = Astro.props;
-const {
-  data: { description, ogImage, publishDate, title, updatedDate },
-  slug,
-} = post;
+const { description, ogImage, publishedAt, title, slug } = post;
 
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
-const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
-const { headings } = await post.render();
+const articleDate = new Date(publishedAt).toISOString();
+// const { headings } = await post.render();
 ---
 
 <PageLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
   <div class="w-full">
     <Button title="Back" href="/blog" style="button">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        slot="icon-before"
-      >
-        <path
-          fill="currentColor"
-          d="m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z"
-        >
-        </path>
-      </svg>
+      <Icon name="back" class="" slot="icon-before" />
     </Button>
     <div class="mt-8 gap-x-10 lg:flex lg:items-start">
-      {!!headings.length && <TOC headings={headings} />}
+      <!-- {!!headings.length && <TOC headings={headings} />} -->
       <article class="flex-grow break-words" data-pagefind-body>
-        <div id="blog-hero"><BlogHero content={post} /></div>
+        <div id="blog-hero"><BlogHero post={post} /></div>
         <div
           class="prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none"
         >

@@ -5,15 +5,12 @@ import Card from "@/components/Card.astro";
 
 import Label from "@/components/Label.astro";
 import SkillLayout from "@/components/SkillLayout.astro";
-// import PostPreview from '@/components/blog/PostPreview.astro'
+import PostPreview from "@/components/blog/PostPreview.astro";
 
 import { Image } from "astro:assets";
 import pfp from "@/assets/pfp.png";
 
-// import {
-// 	getAllPosts
-// 	sortMDByDate
-// } from '@/utils'
+import { getAllPosts, sortMDByDate } from "@/utils";
 import { personalConfig } from "@/site.config";
 import { Icon } from "astro-icon/components";
 import Chat from "@/components/Chat.astro";
@@ -63,9 +60,9 @@ const others = [
   "Azure",
 ];
 
-// const MAX_POSTS = 10
-// const allPosts = await getAllPosts()
-// const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -132,19 +129,19 @@ const others = [
       </p>
     </Section>
 
-    <!-- { -->
-    <!-- 	allPostsByDate.length > 0 && ( -->
-    <!-- 		<Section title='Posts'> -->
-    <!-- 			<ul class='flex flex-col gap-y-2'> -->
-    <!-- 				{allPostsByDate.map((p) => ( -->
-    <!-- 					<li class='flex flex-col gap-x-2 sm:flex-row'> -->
-    <!-- 						<PostPreview post={p} /> -->
-    <!-- 					</li> -->
-    <!-- 				))} -->
-    <!-- 			</ul> -->
-    <!-- 		</Section> -->
-    <!-- 	) -->
-    <!-- } -->
+    {
+      allPostsByDate.length > 0 && (
+        <Section title="Posts">
+          <ul class="flex flex-col gap-y-2">
+            {allPostsByDate.map((p) => (
+              <li class="flex flex-col gap-x-2 sm:flex-row">
+                <PostPreview post={p} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )
+    }
 
     <Section title="Experience">
       <Card

@@ -1,34 +1,34 @@
 ---
 import type { HTMLTag, Polymorphic } from "astro/types";
-import type { CollectionEntry } from "astro:content";
 
 import FormattedDate from "../FormattedDate.astro";
+import type { SanityDocument } from "@sanity/client";
 
-type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
-  post: CollectionEntry<"post">;
+type Props<Tag extends HTMLTag = HTMLTag> = Polymorphic<{ as: Tag }> & {
+  post: SanityDocument;
   withDesc?: boolean;
 };
 
 const { as: Tag = "div", post, withDesc = false } = Astro.props;
-const postDate = post.data.updatedDate ?? post.data.publishDate;
+const postDate = post.publishedAt;
 ---
 
 <li class="flex flex-col gap-2 sm:flex-row sm:gap-x-4 [&_q]:basis-full">
-  <FormattedDate class="min-w-[120px]" date={postDate} />
+  <FormattedDate class="min-w-[120px]" date={new Date(postDate)} />
 
   <Tag>
-    {post.data.draft && <span class="text-red-500">(Draft) </span>}
+    {post.isDraft && <span class="text-red-500">(Draft) </span>}
     <a
       data-astro-prefetch
-      href={`/blog/${post.slug}/`}
+      href={`/blog/${post.slug.current}/`}
       class="transition-all hover:text-muted-foreground"
     >
-      {post.data.title}
+      {post.title}
     </a>
     {
       withDesc && (
         <p class="line-clamp-3 block text-sm italic text-muted-foreground">
-          {post.data.description}
+          {post.description}
         </p>
       )
     }

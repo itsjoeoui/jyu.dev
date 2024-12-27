@@ -1,5 +1,6 @@
 ---
 import { personalConfig } from "@/site.config";
+import Menu from "../Menu.astro";
 ---
 
 <header
@@ -16,26 +17,9 @@ import { personalConfig } from "@/site.config";
     >
 
     <div class="flex flex-row items-center justify-center gap-x-5 sm:gap-x-7">
-      <!-- <a -->
-      <!-- 	href='/blog' -->
-      <!-- 	class='flex-none text-[1.05rem] font-medium hover:text-foreground/75' -->
-      <!-- 	aria-label='Nav Menu Item' -->
-      <!-- 	>Blog -->
-      <!-- </a> -->
-      <a
-        href="/tools"
-        class="flex-none text-[1.05rem] font-medium hover:text-foreground/75"
-        aria-label="Nav Menu Item"
-        >Tools
-      </a>
-
-      <a
-        href="/refer"
-        class="flex-none text-[1.05rem] font-medium hover:text-foreground/75"
-        aria-label="Nav Menu Item"
-        >Referrals
-      </a>
-
+      <div class="hidden sm:block">
+        <Menu />
+      </div>
       <button
         id="toggleDarkMode"
         class="relative rounded-md border border-border p-1.5 transition-all hover:bg-border"
@@ -66,6 +50,10 @@ import { personalConfig } from "@/site.config";
       </button>
     </div>
   </nav>
+  <div class="block sm:hidden">
+    <div class="py-1.5"></div>
+    <Menu />
+  </div>
 </header>
 
 <script>

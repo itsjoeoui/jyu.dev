@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
+// import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/remarkReadingTime.ts";
@@ -14,6 +14,8 @@ import partytown from "@astrojs/partytown";
 
 import sanity from "@sanity/astro";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://jyu.dev",
@@ -23,14 +25,16 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
-    mdx(),
+    // mdx(),
     icon(),
     partytown({ config: { forward: ["dataLayer.push"] } }),
     sanity({
       projectId: "9zcu1jb0",
       dataset: "production",
       useCdn: false, // for static builds
+      studioBasePath: "/admin",
     }),
+    react(),
   ],
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
@@ -51,9 +55,6 @@ export default defineConfig({
   },
   prefetch: true,
   output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: vercel(),
 });
+

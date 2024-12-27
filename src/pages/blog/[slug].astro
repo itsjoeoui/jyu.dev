@@ -1,25 +1,25 @@
 ---
 export const prerender = true;
-
-import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
+import { PortableText } from "astro-portabletext";
+import type { InferGetStaticPropsType } from "astro";
 
 import PostLayout from "@/layouts/BlogPost.astro";
-import { getAllPosts } from "@/utils";
 
-export const getStaticPaths = (async () => {
-  const blogEntries = await getAllPosts();
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
-}) satisfies GetStaticPaths;
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
+
+export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
+  const SLUGS_QUERY = `*[_type == "post" && defined(slug.current)]{
+    "params": {"slug": slug.current}
+  }`;
+  return await sanityClient.fetch(SLUGS_QUERY, Astro.params);
+}
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-const { entry } = Astro.props;
-const { Content } = await entry.render();
 ---
 
-<PostLayout post={entry}>
-  <Content />
+<PostLayout post={post}>
+  {Array.isArray(post.body) && <PortableText value={post.body} />}
 </PostLayout>
