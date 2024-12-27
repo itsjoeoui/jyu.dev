@@ -34,13 +34,17 @@ export const personalConfig: PersonalConfig = {
 
 export const menuLinks: Array<{ title: string; path: string }> = [
   {
-    title: "Home",
-    path: "/",
+    title: "Blog",
+    path: "/blog/",
   },
-  // {
-  // 	title: 'Blog',
-  // 	path: '/blog/'
-  // }
+  {
+    title: "Tools",
+    path: "/tools/",
+  },
+  {
+    title: "Referrals",
+    path: "/refer/",
+  },
 ];
 
 // https://expressive-code.com/reference/configuration/
