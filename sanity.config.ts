@@ -2,6 +2,7 @@
 import { schemaTypes } from "@/schema";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
+import { markdownSchema } from "sanity-plugin-markdown";
 
 export default defineConfig({
   projectId: "9zcu1jb0",
@@ -9,7 +10,7 @@ export default defineConfig({
   // useCdn: false, // for static builds
   name: "jyuhq",
   title: "JYUHQ",
-  plugins: [structureTool()],
+  plugins: [structureTool(), markdownSchema()],
   schema: {
     types: schemaTypes,
   },

@@ -31,16 +31,16 @@ export const postType = defineType({
       name: "image",
       type: "image",
     }),
-    defineField({
-      name: "body",
-      type: "array",
-      of: [{ type: "block" }],
-    }),
     // defineField({
-    //   type: 'markdown',
-    //   name: 'markdown',
-    //   title: 'Markdown',
+    //   name: "body",
+    //   type: "array",
+    //   of: [{ type: "block" }],
     // }),
+    defineField({
+      type: "markdown",
+      name: "markdown",
+      title: "Markdown",
+    }),
     defineField({
       name: "tags",
       type: "array",
