@@ -36,11 +36,6 @@ export default defineConfig({
     }),
     react(),
   ],
-  vite: {
-    optimizeDeps: {
-      // exclude: ["@sanity/client", "@sanity/astro"],
-    },
-  },
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
     rehypePlugins: [

@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import FormattedDate from "../FormattedDate.astro";
 import type { SanityDocument } from "@sanity/client";
 
+import { sanityClient } from "sanity:client";
+import imageUrlBuilder from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 interface Props {
   post: SanityDocument;
 }
@@ -14,21 +18,23 @@ const { post } = Astro.props;
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   month: "long",
 };
+const { projectId, dataset } = sanityClient.config();
+const urlFor = (source: SanityImageSource) =>
+  projectId && dataset
+    ? imageUrlBuilder({ projectId, dataset }).image(source)
+    : null;
+
+const postImageUrl = post.image
+  ? urlFor(post.image)?.width(480).height(270).url()
+  : null;
 ---
 
 {
-  post.coverImage && (
-    <div class="aspect-h-9 aspect-w-16 mb-6">
-      <Image
-        alt={post.coverImage.alt}
-        class="rounded-2xl object-cover"
-        fetchpriority="high"
-        loading="eager"
-        src={post.coverImage.src}
-      />
-    </div>
+  postImageUrl && (
+    <img src={postImageUrl} alt={post.title} class="aspect-video rounded-xl" />
   )
 }
+
 {post.isDraft ? <span class="text-red-500">(Draft)</span> : null}
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
   <p class="text-xs">
