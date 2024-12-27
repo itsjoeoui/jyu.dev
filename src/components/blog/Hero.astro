@@ -1,17 +1,15 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 import FormattedDate from "../FormattedDate.astro";
+import type { SanityDocument } from "@sanity/client";
 
 interface Props {
-  content: CollectionEntry<"post">;
+  post: SanityDocument;
 }
 
-const {
-  content: { data, render },
-} = Astro.props;
+const { post } = Astro.props;
 
-const { remarkPluginFrontmatter } = await render();
+// const { remarkPluginFrontmatter } = await render();
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   month: "long",
@@ -19,33 +17,33 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 ---
 
 {
-  data.coverImage && (
+  post.coverImage && (
     <div class="aspect-h-9 aspect-w-16 mb-6">
       <Image
-        alt={data.coverImage.alt}
+        alt={post.coverImage.alt}
         class="rounded-2xl object-cover"
         fetchpriority="high"
         loading="eager"
-        src={data.coverImage.src}
+        src={post.coverImage.src}
       />
     </div>
   )
 }
-{data.draft ? <span class="text-red-500">(Draft)</span> : null}
+{post.draft ? <span class="text-red-500">(Draft)</span> : null}
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
   <p class="text-xs">
-    <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{
+    <FormattedDate date={post.publishDate} dateTimeOptions={dateTimeOptions} /> /{
       " "
     }
-    {remarkPluginFrontmatter.minutesRead}
+    <!-- {remarkPluginFrontmatter.minutesRead} -->
   </p>
 </div>
 <h1 class="mt-2 text-3xl font-medium sm:mb-1">
-  {data.title}
+  {post.title}
 </h1>
 
 {
-  !!data.tags?.length && (
+  !!post.tags?.length && (
     <div class="mt-3 flex flex-row items-center gap-x-1">
       <svg
         aria-hidden="true"
@@ -64,30 +62,30 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
         <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
         <path d="M6 9h-.01" />
       </svg>
-      {data.tags.map((tag, i) => (
-        <div>
-          <a
-            aria-label={`View more blogs with the tag ${tag}`}
-            class="inline-block before:content-['#'] hover:underline hover:underline-offset-4"
-            data-pagefind-filter="tag"
-            href={`/tags/${tag}/`}
-          >
-            {tag}
-          </a>
-          {i < data.tags.length - 1 && ", "}
-        </div>
-      ))}
+      <!-- {post.tags.map((tag, i) => ( -->
+      <!--   <div> -->
+      <!--     <a -->
+      <!--       aria-label={`View more blogs with the tag ${tag}`} -->
+      <!--       class="inline-block before:content-['#'] hover:underline hover:underline-offset-4" -->
+      <!--       data-pagefind-filter="tag" -->
+      <!--       href={`/tags/${tag}/`} -->
+      <!--     > -->
+      <!--       {tag} -->
+      <!--     </a> -->
+      <!--     {i < post.tags.length - 1 && ", "} -->
+      <!--   </div> -->
+      <!-- ))} -->
     </div>
   )
 }
 
 {
-  data.updatedDate && (
+  post.updatedDate && (
     <p class="mt-6 text-base">
       Last Updated:
       <FormattedDate
         class="ms-1"
-        date={data.updatedDate}
+        date={post.updatedDate}
         dateTimeOptions={dateTimeOptions}
       />
     </p>

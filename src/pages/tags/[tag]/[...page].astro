@@ -2,13 +2,13 @@
 export const prerender = true;
 
 import type { GetStaticPaths, Page } from "astro";
-import type { CollectionEntry } from "astro:content";
 
 import Pagination from "@/components/Paginator.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import PageLayout from "@/layouts/BaseLayout.astro";
 import Button from "@/components/Button.astro";
 import { getAllPosts, getUniqueTags, sortMDByDate } from "@/utils";
+import type { SanityDocument } from "@sanity/client";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allPosts = await getAllPosts();
@@ -17,7 +17,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 
   return uniqueTags.flatMap((tag) => {
     const filterPosts = allPostsByDate.filter((post) =>
-      post.data.tags.includes(tag),
+      post.tags.includes(tag),
     );
     return paginate(filterPosts, {
       pageSize: 10,
@@ -27,7 +27,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 };
 
 interface Props {
-  page: Page<CollectionEntry<"post">>;
+  page: Page<SanityDocument>;
 }
 
 const { page } = Astro.props;

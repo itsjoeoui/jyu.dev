@@ -1,14 +1,18 @@
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
 
 /** Note: this function filters out draft posts based on the environment */
 export async function getAllPosts() {
-  return await getCollection("post", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-  });
+  const POSTS_QUERY = `*[
+  _type == "post"
+  && defined(slug.current)
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, tags}`;
+
+  return await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
 }
 
-export function sortMDByDate(posts: Array<CollectionEntry<"post">>) {
+export function sortMDByDate(posts: SanityDocument[]) {
   return posts.sort((a, b) => {
     const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf();
     const bDate = new Date(b.data.updatedDate ?? b.data.publishDate).valueOf();
@@ -17,18 +21,19 @@ export function sortMDByDate(posts: Array<CollectionEntry<"post">>) {
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getAllTags(posts: Array<CollectionEntry<"post">>) {
-  return posts.flatMap((post) => [...post.data.tags]);
+export function getAllTags(posts: SanityDocument[]) {
+  console.log(posts);
+  return posts.flatMap((post) => [...post.tags]);
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getUniqueTags(posts: Array<CollectionEntry<"post">>) {
+export function getUniqueTags(posts: SanityDocument[]) {
   return [...new Set(getAllTags(posts))];
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
 export function getUniqueTagsWithCount(
-  posts: Array<CollectionEntry<"post">>,
+  posts: SanityDocument[],
 ): Array<[string, number]> {
   return [
     ...getAllTags(posts).reduce(

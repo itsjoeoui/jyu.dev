@@ -50,6 +50,9 @@ importers:
       astro-icon:
         specifier: ^1.1.4
         version: 1.1.4
+      astro-portabletext:
+        specifier: ^0.11.0
+        version: 0.11.0(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -2650,6 +2653,11 @@ packages:
 
   astro-icon@1.1.4:
     resolution: {integrity: sha512-sMLkQaevIQLv38WBzb/RDbsmxhg5+X+KcNmpTi9cE6MLurNWU1MPnlO87d9Vwg4HxTenKpDlYp81A3syXFW/gw==}
+
+  astro-portabletext@0.11.0:
+    resolution: {integrity: sha512-ftCwtR8hUV9/vug46xVFwI9aZTwXi6fREOGo11ogvt/UKDheZcMmiKxBSqh9ABRPVBJf6UkFmKTkbVawnu6gdA==}
+    peerDependencies:
+      astro: '>=4.6.0'
 
   astro@5.1.1:
     resolution: {integrity: sha512-prpWC2PRs4P3FKQg6gZaU+VNMqbZi5pDvORGB2nrjfRjkrvF6/l4BqhvkJ6YQ0Ohm5rIMVz8ljgaRI77mLHbwg==}
@@ -10099,6 +10107,12 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
+
+  astro-portabletext@0.11.0(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1)):
+    dependencies:
+      '@portabletext/toolkit': 2.0.16
+      '@portabletext/types': 2.0.13
+      astro: 5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1)
 
   astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
