@@ -1,18 +1,15 @@
 ---
+export const prerender = true;
+
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import hljs from "highlight.js";
-export const prerender = true;
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
+import type { InferGetStaticPropsType } from "astro";
+import PostLayout from "@/layouts/BlogPost.astro";
 // import { PortableText } from "astro-portabletext";
 // import { marked } from "marked";
-
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
-import type { InferGetStaticPropsType } from "astro";
-
-import PostLayout from "@/layouts/BlogPost.astro";
 
 export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
   const SLUGS_QUERY = `*[_type == "post" && defined(slug.current)]{
@@ -20,6 +17,9 @@ export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
   }`;
   return await sanityClient.fetch(SLUGS_QUERY, Astro.params);
 }
+
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
 const marked = new Marked(
   markedHighlight({
     emptyLangClass: "hljs",
