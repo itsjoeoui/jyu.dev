@@ -38,6 +38,9 @@ importers:
       '@sanity/client':
         specifier: ^6.24.1
         version: 6.24.1(debug@4.4.0)
+      '@sanity/image-url':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@sanity/visual-editing':
         specifier: ^2.11.3
         version: 2.11.3(@sanity/client@6.24.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)

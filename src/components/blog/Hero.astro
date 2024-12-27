@@ -32,7 +32,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 {post.isDraft ? <span class="text-red-500">(Draft)</span> : null}
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
   <p class="text-xs">
-    <FormattedDate date={post.publishDate} dateTimeOptions={dateTimeOptions} /> /{
+    <FormattedDate date={new Date(post.publishedAt)} dateTimeOptions={dateTimeOptions} /> /{
       " "
     }
     <!-- {remarkPluginFrontmatter.minutesRead} -->

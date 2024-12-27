@@ -6,7 +6,7 @@ export async function getAllPosts() {
   const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, tags, isDraft}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, tags, isDraft, description, image}`;
 
   return await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
 }
