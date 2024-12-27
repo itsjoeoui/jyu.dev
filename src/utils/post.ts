@@ -13,15 +13,15 @@ export async function getAllPosts() {
 
 export function sortMDByDate(posts: SanityDocument[]) {
   return posts.sort((a, b) => {
-    const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf();
-    const bDate = new Date(b.data.updatedDate ?? b.data.publishDate).valueOf();
+    const aDate = new Date(a.publishedAt).valueOf();
+    const bDate = new Date(b.publishedAt).valueOf();
     return bDate - aDate;
   });
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
 export function getAllTags(posts: SanityDocument[]) {
-  return posts.flatMap((post) => [...post.tags]);
+  return posts.flatMap((post) => (post.tags ? [...post.tags] : []));
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */

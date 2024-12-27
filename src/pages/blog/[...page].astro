@@ -12,8 +12,6 @@ import { getAllPosts, getUniqueTags, sortMDByDate } from "@/utils";
 
 import { Icon } from "astro-icon/components";
 
-const posts = await getAllPosts();
-
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getAllPosts();
   const allPostsByDate = sortMDByDate(allPosts);
@@ -59,11 +57,11 @@ const paginationProps = {
     {page.data.length === 0 && <p>No posts yet.</p>}
 
     {
-      posts.length > 0 && (
+      page.data.length > 0 && (
         <div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
           <section aria-label="Blog posts list">
             <ul class="flex flex-col gap-y-4 text-start">
-              {posts.map((p) => (
+              {page.data.map((p) => (
                 <PostPreview post={p} withDesc />
               ))}
             </ul>
