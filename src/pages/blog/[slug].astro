@@ -2,16 +2,13 @@
 export const prerender = true;
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { PortableText } from "astro-portabletext";
+import type { InferGetStaticPropsType } from "astro";
+
+import PostLayout from "@/layouts/BlogPost.astro";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
-import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
-
-import PostLayout from "@/layouts/BlogPost.astro";
-import { getAllPosts } from "@/utils";
 
 export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
   const SLUGS_QUERY = `*[_type == "post" && defined(slug.current)]{
@@ -20,20 +17,7 @@ export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
   return await sanityClient.fetch(SLUGS_QUERY, Astro.params);
 }
 
-const { projectId, dataset } = sanityClient.config();
-const urlFor = (source: SanityImageSource) =>
-  projectId && dataset
-    ? imageUrlBuilder({ projectId, dataset }).image(source)
-    : null;
-const postImageUrl = post.image
-  ? urlFor(post.image)?.width(550).height(310).url()
-  : null;
-
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-console.log(post);
-// const { entry } = Astro.props;
-// const { Content } = await entry.render();
 ---
 
 <PostLayout post={post}>
