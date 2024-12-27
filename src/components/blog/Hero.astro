@@ -47,6 +47,9 @@ const postImageUrl = post.image
 <h1 class="mt-2 text-3xl font-medium sm:mb-1">
   {post.title}
 </h1>
+<p class="line-clamp-3 block text-sm italic text-muted-foreground">
+  {post.description}
+</p>
 
 {
   !!post.tags?.length && (
