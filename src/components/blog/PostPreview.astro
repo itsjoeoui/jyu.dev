@@ -18,7 +18,7 @@ const postDate = post.publishedAt;
   <FormattedDate class="min-w-[120px]" date={new Date(postDate)} />
 
   <Tag>
-    <!-- {post.data.draft && <span class="text-red-500">(Draft) </span>} -->
+    {post.isDraft && <span class="text-red-500">(Draft) </span>}
     <a
       data-astro-prefetch
       href={`/blog/${post.slug.current}/`}

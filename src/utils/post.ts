@@ -1,4 +1,3 @@
-import type { CollectionEntry } from "astro:content";
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
 
@@ -7,7 +6,7 @@ export async function getAllPosts() {
   const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, tags}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, tags, isDraft}`;
 
   return await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
 }
