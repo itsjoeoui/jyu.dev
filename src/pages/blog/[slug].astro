@@ -8,7 +8,6 @@ import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
 import type { InferGetStaticPropsType } from "astro";
 import PostLayout from "@/layouts/BlogPost.astro";
-// import { PortableText } from "astro-portabletext";
 // import { marked } from "marked";
 
 export async function getStaticPaths(): Promise<{ params: { slug: string } }> {

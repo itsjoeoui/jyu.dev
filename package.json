@@ -28,7 +28,6 @@
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^1.1.5",
     "clsx": "^2.1.1",
-    "easymde": "^2.18.0",
     "highlight.js": "^11.11.1",
     "marked": "^15.0.4",
     "marked-highlight": "^2.2.1",
