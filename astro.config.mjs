@@ -8,7 +8,6 @@ import rehypeExternalLinks from "rehype-external-links";
 import expressiveCode from "astro-expressive-code";
 import { expressiveCodeOptions } from "./src/site.config";
 import icon from "astro-icon";
-import vercel from "@astrojs/vercel";
 
 import partytown from "@astrojs/partytown";
 
@@ -16,9 +15,12 @@ import sanity from "@sanity/astro";
 
 import react from "@astrojs/react";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://jyu.dev",
+
   integrations: [
     expressiveCode(expressiveCodeOptions),
     tailwind({
@@ -36,6 +38,7 @@ export default defineConfig({
     }),
     react(),
   ],
+
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
     rehypePlugins: [
@@ -53,7 +56,8 @@ export default defineConfig({
       },
     },
   },
+
   prefetch: true,
   output: "server",
-  adapter: vercel(),
+  adapter: cloudflare(),
 });
