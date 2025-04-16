@@ -41,10 +41,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
     title: "Tools",
     path: "/tools/",
   },
-  {
-    title: "Referrals",
-    path: "/refer/",
-  },
+  // {
+  //   title: "Referrals",
+  //   path: "/refer/",
+  // },
 ];
 
 // https://expressive-code.com/reference/configuration/
