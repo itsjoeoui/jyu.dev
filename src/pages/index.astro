@@ -57,6 +57,8 @@ const others = [
   "Datadog",
 ];
 
+const interests = ["Observability", "Database", "Infrastructure", "Compiler"];
+
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
@@ -64,17 +66,20 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
   <div class="flex w-full flex-col gap-y-10">
-    <section class="flex flex-col items-center gap-y-7">
+    <section
+      class="flex flex-col items-center justify-evenly gap-y-2 md:flex-row md:gap-y-6"
+    >
       <Image
         src={pfp}
         alt="profile pic"
-        class="h-28 w-auto rounded-full bg-[#FFBE98] p-1"
+        class="h-32 w-auto rounded-full bg-[#FFBE98] p-1 md:h-64"
         loading="eager"
       />
 
-      <div class="flex flex-col items-center gap-y-4">
-        <h1 class="text-3xl font-bold">{personalConfig.name}</h1>
-        <Chat />
+      <!-- <div class="md:px-6"></div> -->
+
+      <div class="flex flex-col items-center gap-y-6">
+        <h1 class="text-3xl font-bold md:text-6xl">{personalConfig.name}</h1>
 
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
           <Label
@@ -113,6 +118,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             <Icon name="linkedin" class="h-6 w-6" />
           </Label>
         </div>
+        <Chat />
       </div>
     </section>
 
@@ -139,6 +145,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         </Section>
       )
     }
+
+    <Section title="Interests">
+      <!-- <SkillLayout title="Languages" skills={languages} /> -->
+      <!-- <SkillLayout title="Languages" skills={languages} /> -->
+      <!-- <SkillLayout title="Frontend" skills={frontend} /> -->
+      <!-- <SkillLayout title="Backend" skills={backend} /> -->
+      <!-- <SkillLayout title="Databases" skills={databases} /> -->
+      <SkillLayout title="" skills={interests} />
+    </Section>
 
     <Section title="Experience">
       <Card
@@ -182,7 +197,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         href="https://www.wealthsimple.com"
       >
         <ul class="ml-4 list-disc text-muted-foreground">
-          <li>Product Engineering - Institutional Transfers</li>
+          <li>Platform Engineering - Institutional Transfers</li>
         </ul>
       </Card>
       <Card
@@ -248,14 +263,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         <!-- <li>Transfer Team</li> -->
         <!-- </ul> -->
       </Card>
-    </Section>
-
-    <Section title="Skills">
-      <SkillLayout title="Languages" skills={languages} />
-      <SkillLayout title="Frontend" skills={frontend} />
-      <SkillLayout title="Backend" skills={backend} />
-      <SkillLayout title="Databases" skills={databases} />
-      <SkillLayout title="Others" skills={others} />
     </Section>
   </div>
 
