@@ -8,7 +8,7 @@ import SkillLayout from "@/components/SkillLayout.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 
 import { Image } from "astro:assets";
-import pfp from "@/assets/pfp.png";
+import pfp from "@/assets/pfp.jpg";
 
 import { getAllPosts, sortMDByDate } from "@/utils";
 import { personalConfig } from "@/site.config";
@@ -68,7 +68,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <Image
         src={pfp}
         alt="profile pic"
-        class="h-28 w-auto rounded-full bg-[#FFBE98] p-2"
+        class="h-28 w-auto rounded-full bg-[#FFBE98] p-1"
         loading="eager"
       />
 
