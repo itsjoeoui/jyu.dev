@@ -81,7 +81,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <div class="flex flex-col items-center gap-y-6">
         <h1 class="text-3xl font-bold md:text-6xl">{personalConfig.name}</h1>
 
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="flex flex-wrap gap-4">
           <Label
             title="Meta"
             as="a"
@@ -92,9 +92,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           </Label>
 
           <Label
-            title="Montreal"
+            title="Menlo Park"
             as="a"
-            href={"https://g.co/kgs/1FZ4j1g"}
+            href={"https://en.wikipedia.org/wiki/Menlo_Park,_California"}
             target="_blank"
           >
             <Icon name="location" class="h-6 w-6" />
