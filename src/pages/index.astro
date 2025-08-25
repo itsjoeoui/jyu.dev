@@ -155,20 +155,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <SkillLayout title="" skills={interests} />
     </Section>
 
-    <Section title="Experience">
-      <!-- <Card -->
-      <!--   heading="Squarepoint Capital" -->
-      <!--   subheading="Software Engineer Intern" -->
-      <!--   date="August 2025 - December 2025 (Incoming)" -->
-      <!--   imagePath="/src/assets/squarepoint.jpg" -->
-      <!--   altText="Squarepoint Capital - Software Engineer Intern" -->
-      <!--   imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5" -->
-      <!--   href="https://www.squarepoint-capital.com/" -->
-      <!-- /> -->
+    <Section title="Experiences">
+      <Card
+        heading="Shopify"
+        subheading="Software Engineer Intern"
+        date="Sep 2025 - Present"
+        imagePath="/src/assets/shopify.png"
+        altText="Shopify - Software Engineer"
+        imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
+        href="https://www.shopify.com"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>Infrastructure Engineering - Observability</li>
+        </ul>
+      </Card>
       <Card
         heading="Meta"
         subheading="Software Engineer Intern"
-        date="May 2025 - Present"
+        date="May 2025 - Aug 2025"
         imagePath="/src/assets/meta.png"
         altText="Meta - Software Engineer Intern"
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
@@ -176,10 +180,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       />
       <Card
         heading="Shopify"
-        subheading="Production Engineer Intern"
+        subheading="Software Engineer Intern"
         date="Jan 2025 - April 2025"
         imagePath="/src/assets/shopify.png"
-        altText="Shopify - Production Engineer Intern"
+        altText="Shopify - Engineer Intern"
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
         href="https://www.shopify.com"
       >
@@ -229,7 +233,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       </Card>
     </Section>
 
-    <Section title="Education">
+    <Section title="Educations">
       <Card
         heading="McGill University"
         subheading="Computer Science and Statistics"
