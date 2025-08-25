@@ -83,18 +83,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
         <div class="flex flex-wrap gap-4">
           <Label
-            title="Meta"
+            title="Shopify"
             as="a"
-            href={"https://www.meta.com/about/"}
+            href={"https://www.shopify.com"}
             target="_blank"
           >
             <Icon name="work" class="h-6 w-6" />
           </Label>
 
           <Label
-            title="Menlo Park"
+            title="Montreal"
             as="a"
-            href={"https://en.wikipedia.org/wiki/Menlo_Park,_California"}
+            href={"https://en.wikipedia.org/wiki/Montreal"}
             target="_blank"
           >
             <Icon name="location" class="h-6 w-6" />
@@ -123,12 +123,56 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
     </section>
 
     <Section title="About">
-      <p class="text-muted-foreground">
-        Perpetual Learner. Software Engineer. <br /> Building <a
-          href="https://fijoy.app"
-          target="_blank">fijoy.app</a
-        >. <br /> Love finance & investing.
-        <br /> Student at McGill University.
+      <p class="">
+        Hey! I am Joey. Currently finishing up my last year at <a
+          href="https://mcgill.ca"
+          class="underline"
+          target="_blank">McGill University</a
+        > studying Computer Science. Expected to graduate in winter 2026.
+      </p>
+      <p class="">
+        There are a couple of things I am quite interested in:
+        <ul class="list-inside list-disc">
+          <li>Database Systems</li>
+          <li>Compilers - I have built a mini C compiler before</li>
+          <li>Functional Programming</li>
+          <li>Observability</li>
+          <li>
+            Personal Finance - I am building <a
+              href="https://fijoy.app"
+              target="_blank"
+              class="underline">fijoy.app</a
+            >
+          </li>
+          <li>Food</li>
+        </ul>
+      </p>
+      <p>
+        I currently work at <a
+          target="_blank"
+          class="underline"
+          href="https://www.shopify.com">Shopify</a
+        >'s observabilty team, and we are building our in-house observability
+        platform called Shopify Observe, which I think is pretty cool!
+      </p>
+      <p>
+        In the past, I worked as a founding engineer at a startup called
+        <a
+          href="https://techcrunch.com/2023/08/29/flojoy-is-bringing-no-code-python-testing-to-industrial-instrumentation/"
+          class="underline"
+          target="_blank">Flojoy</a
+        >. With my team, we raised 1.3M USD to bring modern test, measurement
+        and control (TMC) tooling to heavy industries where software hasn't kept
+        up. Besides this, I've worked at companies such as
+        <a target="_blank" class="underline" href="https://meta.com/about"
+          >Meta</a
+        >, <a target="_blank" class="underline" href="https://wealthsimple.com"
+          >Wealthsimple</a
+        >, etc.
+      </p>
+      <p>
+        If you have similar interests, or just want to say hi and chat, feel
+        free to hit me up!
       </p>
     </Section>
 
@@ -189,7 +233,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imagePath="/src/assets/meta.png"
         altText="Meta - Software Engineer Intern"
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
-        href="https://www.meta.com"
+        href="https://www.meta.com/about"
       />
       <Card
         heading="Shopify"
@@ -224,7 +268,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imagePath="/src/assets/flojoy.png"
         altText="Flojoy - Founding Software Engineer"
         imageClass="h-12 w-auto md:-left-16"
-        href="https://www.flojoy.ai"
+        href="https://techcrunch.com/2023/08/29/flojoy-is-bringing-no-code-python-testing-to-industrial-instrumentation/"
       >
         <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
         <!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
