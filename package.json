@@ -18,12 +18,12 @@
     "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
-    "@astrojs/tailwind": "^5.1.5",
     "@iconify-json/devicon": "^1.2.42",
     "@sanity/astro": "^3.2.10",
     "@sanity/client": "^7.9.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/visual-editing": "^3.0.3",
+    "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.3",
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^1.1.5",
@@ -43,7 +43,7 @@
     "sharp": "^0.33.5",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

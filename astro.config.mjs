@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 // import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/remarkReadingTime.ts";
 import remarkUnwrapImages from "remark-unwrap-images";
@@ -17,15 +16,14 @@ import react from "@astrojs/react";
 
 import cloudflare from "@astrojs/cloudflare";
 
+import tailwindcss from "@tailwindcss/vite";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://jyu.dev",
 
   integrations: [
     expressiveCode(expressiveCodeOptions),
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap(),
     // mdx(),
     icon(),
@@ -60,5 +58,8 @@ export default defineConfig({
   prefetch: true,
   output: "server",
   adapter: cloudflare({ imageService: "compile" }),
-});
 
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});
