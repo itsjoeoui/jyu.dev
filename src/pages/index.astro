@@ -81,7 +81,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <div class="flex flex-col items-center gap-y-6">
         <h1 class="text-3xl font-bold md:text-6xl">{personalConfig.name}</h1>
 
-        <div class="flex flex-wrap gap-4">
+        <div class="grid grid-cols-2 gap-4">
           <Label
             title="Shopify"
             as="a"
