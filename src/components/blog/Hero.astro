@@ -16,6 +16,7 @@ const { post } = Astro.props;
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   month: "long",
+  hour: "numeric",
 };
 const { projectId, dataset } = sanityClient.config();
 const urlFor = (source: SanityImageSource) =>
@@ -47,7 +48,7 @@ const postImageUrl = post.image
 <h1 class="mt-2 text-3xl font-medium sm:mb-1">
   {post.title}
 </h1>
-<p class="line-clamp-3 block text-sm italic text-muted-foreground">
+<p class="text-muted-foreground line-clamp-3 block text-sm italic">
   {post.description}
 </p>
 
