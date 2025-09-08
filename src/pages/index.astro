@@ -13,7 +13,7 @@ import pfp from "@/assets/pfp.jpg";
 import { getAllPosts, sortMDByDate } from "@/utils";
 import { personalConfig } from "@/site.config";
 import { Icon } from "astro-icon/components";
-import Chat from "@/components/Chat.astro";
+// import Chat from "@/components/Chat.astro";
 
 // const languages = [
 //   "TypeScript",
@@ -57,7 +57,7 @@ import Chat from "@/components/Chat.astro";
 //   "Datadog",
 // ];
 
-const interests = ["Observability", "Database", "Infrastructure", "Compiler"];
+// const interests = ["Observability", "Database", "Infrastructure", "Compiler"];
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -118,7 +118,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             <Icon name="linkedin" class="h-6 w-6" />
           </Label>
         </div>
-        <Chat />
+        <!-- <Chat /> -->
       </div>
     </section>
 
@@ -153,7 +153,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           target="_blank"
           class="underline"
           href="https://www.shopify.com">Shopify</a
-        >'s observabilty team, and we are building our in-house observability
+        >'s observability team, and we are building our in-house observability
         platform called Shopify Observe, which I think is pretty cool!
       </p>
       <p>
@@ -191,14 +191,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       )
     }
 
-    <Section title="Interests">
-      <!-- <SkillLayout title="Languages" skills={languages} /> -->
-      <!-- <SkillLayout title="Languages" skills={languages} /> -->
-      <!-- <SkillLayout title="Frontend" skills={frontend} /> -->
-      <!-- <SkillLayout title="Backend" skills={backend} /> -->
-      <!-- <SkillLayout title="Databases" skills={databases} /> -->
-      <SkillLayout title="" skills={interests} />
-    </Section>
+    <!-- <Section title="Interests"> -->
+    <!-- <SkillLayout title="Languages" skills={languages} /> -->
+    <!-- <SkillLayout title="Languages" skills={languages} /> -->
+    <!-- <SkillLayout title="Frontend" skills={frontend} /> -->
+    <!-- <SkillLayout title="Backend" skills={backend} /> -->
+    <!-- <SkillLayout title="Databases" skills={databases} /> -->
+    <!-- <SkillLayout title="" skills={interests} /> -->
+    <!-- </Section> -->
 
     <Section title="Experiences">
       <!-- <Card -->
@@ -223,7 +223,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
         href="https://www.shopify.com"
       >
-        <ul class="ml-4 list-disc text-muted-foreground">
+        <ul class="text-muted-foreground ml-4 list-disc">
           <li>Infrastructure Engineering - Observability</li>
         </ul>
       </Card>
@@ -245,7 +245,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
         href="https://www.shopify.com"
       >
-        <ul class="ml-4 list-disc text-muted-foreground">
+        <ul class="text-muted-foreground ml-4 list-disc">
           <li>Infrastructure Engineering - Observability</li>
         </ul>
       </Card>
@@ -258,7 +258,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
         href="https://www.wealthsimple.com"
       >
-        <ul class="ml-4 list-disc text-muted-foreground">
+        <ul class="text-muted-foreground ml-4 list-disc">
           <li>Platform Engineering - Institutional Transfers</li>
         </ul>
       </Card>
@@ -330,5 +330,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
   <div class="py-4"></div>
 
-  <Chat />
+  <!-- <Chat /> -->
 </PageLayout>
