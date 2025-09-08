@@ -72,7 +72,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <Image
         src={pfp}
         alt="profile pic"
-        class="h-32 w-auto rounded-full bg-[#FFBE98] p-1 md:h-64"
+        class="h-32 w-auto rounded-full bg-[#FFBE98] p-1 md:h-48"
         loading="eager"
       />
 
@@ -235,7 +235,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         altText="Meta - Software Engineer Intern"
         imageClass="h-12 w-auto md:-left-16 rounded-xl p-0.5"
         href="https://www.meta.com/about"
-      />
+      >
+        <ul class="text-muted-foreground ml-4 list-disc">
+          <li>Infrastructure Engineering - Network Infra</li>
+        </ul>
+      </Card>
       <Card
         heading="Shopify"
         subheading="Software Engineer Intern"
@@ -249,6 +253,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           <li>Infrastructure Engineering - Observability</li>
         </ul>
       </Card>
+      <div>2023 - 2024</div>
       <Card
         heading="Wealthsimple"
         subheading="Software Engineer Intern"
@@ -271,10 +276,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imageClass="h-12 w-auto md:-left-16"
         href="https://techcrunch.com/2023/08/29/flojoy-is-bringing-no-code-python-testing-to-industrial-instrumentation/"
       >
-        <!-- <ul class='ml-4 list-disc text-muted-foreground'> -->
-        <!-- 	<li>Lead the team to build Flojoy Studio and Flojoy Cloud</li> -->
-        <!-- </ul> -->
+        <ul class="text-muted-foreground ml-4 list-disc">
+          <li>Raised 1.3M USD to modernize heavy industries.</li>
+        </ul>
       </Card>
+      <div>2021 - 2023</div>
 
       <Card
         heading="Ciena"
