@@ -24,7 +24,7 @@
     "@sanity/image-url": "^1.2.0",
     "@sanity/visual-editing": "^3.2.4",
     "@tailwindcss/vite": "^4.1.16",
-    "astro": "^5.15.1",
+    "astro": "^5.15.9",
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^1.1.5",
     "clsx": "^2.1.1",
