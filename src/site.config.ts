@@ -32,14 +32,25 @@ export const personalConfig: PersonalConfig = {
   name: "Joey Yu",
 };
 
-export const menuLinks: Array<{ title: string; path: string }> = [
+export const menuLinks: Array<{
+  title: string;
+  path: string;
+  external: boolean;
+}> = [
   {
     title: "Blog",
     path: "/blog/",
+    external: false,
   },
   {
     title: "Tools",
     path: "/tools/",
+    external: false,
+  },
+  {
+    title: "TIL",
+    path: "https://til.jyu.dev/",
+    external: true,
   },
   // {
   //   title: "Referrals",
